@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:rc_fl_quiz_app/screens/musicCategories/MusicCategories.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'screens/screens.dart';
 import 'screens/MusicQuizz/Levels/Levels_screen.dart';
@@ -88,6 +89,12 @@ class MyApp extends StatelessWidget {
           case '/categories':
             return PageTransition(
               child: const CategoriesScreen(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
+            case '/musicCategories':
+            return PageTransition(
+              child: const MusicCategoriesScreen(),
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
