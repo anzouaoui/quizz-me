@@ -82,6 +82,7 @@ flutter:
     - assets/referFriend/
     - assets/contactus/
     - assets/music/
+    - assets/musicCategories/
 
   fonts:
     - family: NunitoSans
