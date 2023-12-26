@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       "image": "assets/home/world.png",
       "title": "Géographie",
       "color": lightGreenColor,
-      "link": '/musicCategories',
+      "link": '/login'
     }
   ];
 
