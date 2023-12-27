@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelsCountries_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'screens/screens.dart';
 import 'screens/MusicQuizz/Levels/Levels_screen.dart';
@@ -100,6 +101,12 @@ class MyApp extends StatelessWidget {
             case '/MusicQuiz':
             return PageTransition(
               child: LevelsPage(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
+            case '/GeographicQuiz':
+            return PageTransition(
+              child: LevelsCountriesPage(),
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );

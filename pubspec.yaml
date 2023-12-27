@@ -56,9 +56,9 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter_icons:
-  android: "launcher_icon"
+  android: "new_logo"
   ios: true
-  image_path: "assets/icon.png"
+  image_path: "assets/new_icon.png"
 
 # The following section is specific to Flutter packages.
 flutter:
@@ -82,6 +82,7 @@ flutter:
     - assets/referFriend/
     - assets/contactus/
     - assets/music/
+    - assets/geographic/
 
   fonts:
     - family: NunitoSans
