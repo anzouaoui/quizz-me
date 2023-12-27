@@ -211,7 +211,7 @@ List<PaysModel> pays_deux = [
     },
   ),
 
-  //16- Maroc
+  //16- Russie
   PaysModel(
     2,
     "Russie",

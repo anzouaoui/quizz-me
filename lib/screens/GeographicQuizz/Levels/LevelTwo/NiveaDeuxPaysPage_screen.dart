@@ -81,14 +81,16 @@ class _NiveauDeuxPaysPageState extends State<NiveauDeuxPaysPage> {
 
                 ///Affichage de la question
                 const SizedBox(
-                  height: 20.0,
+                  height: 10.0,
                 ),
                 ///Affichage du drapeau
                   Image(
-                      image: AssetImage("geographic/${pays_deux[index].flag}"),
+                      image: AssetImage(
+                          "assets/geographic/${pays_deux[index].flag}",
+                      ),
                   ),
                 const SizedBox(
-                  height: 20.0,
+                  height: 10.0,
                 ),
 
                 ///Affichage des réponses possibles
@@ -129,7 +131,7 @@ class _NiveauDeuxPaysPageState extends State<NiveauDeuxPaysPage> {
                     ),
                   ),
                 const SizedBox(
-                  height: 50.0,
+                  height: 20.0,
                 ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   //Bouton prochaine question et résultat
