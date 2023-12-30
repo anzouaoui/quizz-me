@@ -3,7 +3,6 @@
 ///****************************************************************
 
 import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_one.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_one.dart';
 import 'package:rc_fl_quiz_app/screens/GeographicQuizz/data/niveau_un_pays_list.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
@@ -21,9 +20,6 @@ class _NiveauUnPaysPageState extends State<NiveauUnPaysPage> {
   ///Mise en place de la variable de jeu
   bool isPressed = false;
 
-  ///Musique lancée ou pas
-  bool isPlayed = false;
-
   ///Couleur par défaut des choix
   Color btnColor = primaryColor;
 
@@ -40,7 +36,7 @@ class _NiveauUnPaysPageState extends State<NiveauUnPaysPage> {
     return Scaffold(
       backgroundColor: whiteColor,
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: const EdgeInsets.all(8.0),
         child: PageView.builder(
           physics: const NeverScrollableScrollPhysics(),
           controller: _controller,
@@ -79,18 +75,11 @@ class _NiveauUnPaysPageState extends State<NiveauUnPaysPage> {
                     ),
                   ),
                 ),
-
-                ///Affichage de la question
-                const SizedBox(
-                  height: 10.0,
-                ),
                 ///Affichage du drapeau
                   Image(
-                      image: AssetImage("assets/geographic/${pays_un[index].flag}"),
+                      image:
+                      AssetImage("assets/geographic/${pays_un[index].flag}"),
                   ),
-                const SizedBox(
-                  height: 10.0,
-                ),
 
                 ///Affichage des réponses possibles
                 for (int i = 0; i < pays_un[index].answer.length; i++)

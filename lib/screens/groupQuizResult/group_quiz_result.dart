@@ -131,7 +131,6 @@ class _GroupQuizResultScreenState extends State<GroupQuizResultScreen> {
           ),
           heightSpace,
           heightSpace,
-          leaderboardButton()
         ],
       ),
     );
@@ -245,36 +244,6 @@ class _GroupQuizResultScreenState extends State<GroupQuizResultScreen> {
           ),
         ),
       ],
-    );
-  }
-
-  leaderboardButton() {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const BottomBarScreen(selectedId: 2)));
-      },
-      child: Container(
-        padding: const EdgeInsets.all(fixPadding * 2.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0),
-          color: primaryColor,
-          boxShadow: [
-            BoxShadow(
-              color: primaryColor.withOpacity(0.25),
-              blurRadius: 32,
-              offset: const Offset(0, 16),
-            )
-          ],
-        ),
-        alignment: Alignment.center,
-        child: const Text(
-          "Leaderboard",
-          style: bold20White,
-        ),
-      ),
     );
   }
 

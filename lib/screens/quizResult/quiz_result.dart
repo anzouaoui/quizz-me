@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:rc_fl_quiz_app/screens/bottomNavigationBar/bottom_navigation_bar.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
 class QuizResultScreen extends StatefulWidget {
@@ -88,7 +87,6 @@ class _QuizResultScreenState extends State<QuizResultScreen> {
           heightSpace,
           heightSpace,
           heightSpace,
-          leaderboardButton()
         ],
       ),
     );
@@ -107,36 +105,6 @@ class _QuizResultScreenState extends State<QuizResultScreen> {
           ),
         ),
       ],
-    );
-  }
-
-  leaderboardButton() {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const BottomBarScreen(selectedId: 2)));
-      },
-      child: Container(
-        padding: const EdgeInsets.all(fixPadding * 2.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5.0),
-          color: primaryColor,
-          boxShadow: [
-            BoxShadow(
-              color: primaryColor.withOpacity(0.25),
-              blurRadius: 32,
-              offset: const Offset(0, 16),
-            )
-          ],
-        ),
-        alignment: Alignment.center,
-        child: const Text(
-          "Leaderboard",
-          style: bold20White,
-        ),
-      ),
     );
   }
 

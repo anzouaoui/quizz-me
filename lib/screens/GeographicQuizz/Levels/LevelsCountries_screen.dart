@@ -2,9 +2,12 @@
 ///******************** PAGE LEVELS *******************************
 ///****************************************************************
 
+import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelFour/NiveauQuatrePaysPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelOne/NiveauUnPaysPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelThree/NiveauTroisPaysPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelTwo/NiveaDeuxPaysPage_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelThree/NiveauTroisPage_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
 class LevelsCountriesPage extends StatelessWidget {
@@ -106,6 +109,62 @@ class LevelsCountriesPage extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //BOUTON NIVEAU 3
+              Container(
+                width: 300,
+                padding: const EdgeInsetsDirectional.symmetric(
+                    horizontal: 32.0, vertical: 8),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0)
+                      ),
+                      minimumSize: const Size(30.0, 50.0)
+                  ),
+                  onPressed: () {
+                    int i = 0;
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NiveauTroisPaysPage()));
+                  },
+                  child: const Text(
+                    "NIVEAU 3",
+                    style: bebas36White,
+                  ),
+                ),
+              ),
+
+              //BOUTON NIVEAU 4
+              Container(
+                width: 300,
+                padding: const EdgeInsetsDirectional.symmetric(
+                    horizontal: 32.0, vertical: 8),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0)
+                      ),
+                      minimumSize: const Size(30.0, 50.0)
+                  ),
+                  onPressed: () {
+                    int i = 0;
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NiveauQuatrePaysPage()));
+                  },
+                  child: const Text(
+                    "NIVEAU 4",
+                    style: bebas36White,
+                  ),
+                ),
+              ),
               TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, "/home");
@@ -147,7 +206,7 @@ class LevelsCountriesPage extends StatelessWidget {
             heightSpace,
             Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Text(
                     "Drapeaux du monde",
                     style: extrabold22White,
@@ -160,10 +219,10 @@ class LevelsCountriesPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5.0),
                     border: Border.all(color: whiteColor, width: 1.5),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.alarm,
                         color: whiteColor,
                         size: 22,

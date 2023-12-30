@@ -3,6 +3,7 @@
 ///****************************************************************
 
 import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_one.dart';
+import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_two.dart';
 import 'package:rc_fl_quiz_app/screens/GeographicQuizz/data/niveau_deux_pays_list.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
@@ -29,7 +30,7 @@ class _NiveauDeuxPaysPageState extends State<NiveauDeuxPaysPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreUn = 0;
+  int scoreDeux = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -116,7 +117,7 @@ class _NiveauDeuxPaysPageState extends State<NiveauDeuxPaysPage> {
                             .answer.entries
                             .toList()[i]
                             .value) {
-                          scoreUn += 1;
+                          scoreDeux += 1;
                           isJust = false;
                         }
                       },
@@ -154,7 +155,7 @@ class _NiveauDeuxPaysPageState extends State<NiveauDeuxPaysPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CountriesQuizResultLevelOneScreen(scoreLevelOne: scoreUn)
+                              builder: (context) => CountriesQuizResultLevelTwoScreen(scoreLevelTwo: scoreDeux)
                           ));
                     }
                         : () {
