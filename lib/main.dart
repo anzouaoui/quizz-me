@@ -86,6 +86,12 @@ class MyApp extends StatelessWidget {
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
+            case '/musicCategories':
+            return PageTransition(
+              child: const MusicCategoriesScreen(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
           case '/liveQuiz':
             return PageTransition(
               child: const LiveQuizScreen(),

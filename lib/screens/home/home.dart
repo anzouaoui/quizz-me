@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
       "image": "assets/home/music.png",
       "title": "Musique",
       "color": blackColor,
-      "link": '/MusicQuiz',
+      "link": '/musicCategories',
     },
     {
       "image": "assets/home/world.png",

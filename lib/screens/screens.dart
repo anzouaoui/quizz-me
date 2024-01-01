@@ -21,3 +21,4 @@ export 'package:rc_fl_quiz_app/screens/leaderBoard/leaderboard.dart';
 export 'package:rc_fl_quiz_app/screens/createQuiz/create_quiz.dart';
 export 'package:rc_fl_quiz_app/screens/createQuizDetail/create_quiz_detail.dart';
 export 'package:rc_fl_quiz_app/screens/createQuizDone/create_quiz_done.dart';
+export 'package:rc_fl_quiz_app/screens/MusicQuizz/musicCategories.dart';
