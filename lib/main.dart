@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelsCountries_screen.dart';
 import 'package:rc_fl_quiz_app/screens/musicCategories/MusicCategories.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'screens/screens.dart';
@@ -80,12 +81,6 @@ class MyApp extends StatelessWidget {
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
-          case '/bottombar':
-            return PageTransition(
-              child: const BottomBarScreen(),
-              type: PageTransitionType.rightToLeft,
-              settings: settings,
-            );
           case '/categories':
             return PageTransition(
               child: const CategoriesScreen(),
@@ -107,6 +102,12 @@ class MyApp extends StatelessWidget {
             case '/MusicQuiz':
             return PageTransition(
               child: LevelsPage(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
+            case '/GeographicQuiz':
+            return PageTransition(
+              child: LevelsCountriesPage(),
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
@@ -158,48 +159,13 @@ class MyApp extends StatelessWidget {
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
+          /*
           case '/leaderboard':
             return PageTransition(
               child: const LeaderBaordScreen(),
               type: PageTransitionType.rightToLeft,
               settings: settings,
-            );
-          case '/profile':
-            return PageTransition(
-              child: const ProfileScreen(),
-              type: PageTransitionType.rightToLeft,
-              settings: settings,
-            );
-          case '/editProfile':
-            return PageTransition(
-              child: const EditProfileScreen(),
-              type: PageTransitionType.rightToLeft,
-              settings: settings,
-            );
-          case '/notification':
-            return PageTransition(
-              child: const NotificationScreen(),
-              type: PageTransitionType.rightToLeft,
-              settings: settings,
-            );
-          case '/referAFriend':
-            return PageTransition(
-              child: const ReferAFriendScreen(),
-              type: PageTransitionType.rightToLeft,
-              settings: settings,
-            );
-          case '/faqs':
-            return PageTransition(
-              child: const FAQsScreen(),
-              type: PageTransitionType.rightToLeft,
-              settings: settings,
-            );
-          case '/contactUs':
-            return PageTransition(
-              child: const ContactUsScreen(),
-              type: PageTransitionType.rightToLeft,
-              settings: settings,
-            );
+            );*/
           case '/createQuiz':
             return PageTransition(
               child: const CreateQuizScreen(),
