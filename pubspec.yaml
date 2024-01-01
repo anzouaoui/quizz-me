@@ -84,6 +84,7 @@ flutter:
     - assets/contactus/
     - assets/music/
     - assets/geographic/
+    - assets/musicCategories/
 
   fonts:
     - family: NunitoSans
