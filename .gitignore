@@ -27,6 +27,8 @@ keys/
 # Flutter/Dart/Pub related
 **/doc/api/
 **/ios/Flutter/.last_build_id
+pubspec.lock
+pubspec.yaml
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -34,7 +36,9 @@ keys/
 .pub-cache/
 .pub/
 /build/
-
+/linux/
+/macos/
+/keys/
 # Symbolication related
 app.*.symbols
 
