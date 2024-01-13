@@ -68,7 +68,7 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
           ),
         ),
         title: const Text(
-          "Choisi la catégorie musicale",
+          "MUSIQUE",
           style: extrabold22White,
         ),
       ),
@@ -128,7 +128,7 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
                       ),
                       height5Space,
                       Text(
-                        "${musicCategoriesList[index]['quiz']} Quiz",
+                        "${musicCategoriesList[index]['quiz']} niveaux",
                         style: semibold16Grey,
                       )
                     ],

@@ -2,50 +2,29 @@ import 'package:flutter/material.dart';
 
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class MusicCategoriesScreen extends StatefulWidget {
-  const MusicCategoriesScreen({super.key});
+class GeographicCategoriesScreen extends StatefulWidget {
+  const GeographicCategoriesScreen({super.key});
 
   @override
-  State<MusicCategoriesScreen> createState() => _MusicCategoriesScreenState();
+  State<GeographicCategoriesScreen> createState() => _GeographicCategoriesScreenState();
 }
 
-class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
-  final musicCategoriesList = [
+class _GeographicCategoriesScreenState extends State<GeographicCategoriesScreen> {
+  final geographicCategoriesList = [
     {
-      "image": "assets/musicCategories/classical.png",
-      "title": "Musique classique",
-      "quiz": "8",
-      "color": pinkColor,
-      "link": '/MusicQuiz'
-    },
-    {
-      "image": "assets/musicCategories/kpop.png",
-      "title": "K-POP",
-      "quiz": "8",
-      "color": orangeColor,
-      "link": '/home'
-    },
-    {
-      "image": "assets/musicCategories/pop.png",
-      "title": "Pop",
-      "quiz": "8",
+      "image": "assets/geographicCategories/flag.png",
+      "title": "Drapeaux",
+      "quiz": "4",
       "color": lightBlueColor,
-      "link": '/home'
+      "link": '/GeographicQuiz'
     },
     {
-      "image": "assets/musicCategories/variety.png",
-      "title": "Variété française",
-      "quiz": "8",
-      "color": lightGreenColor,
-      "link": '/home'
-    },
-    {
-      "image": "assets/musicCategories/cartoon.png",
-      "title": "Dessin animé",
+      "image": "assets/geographicCategories/capital.png",
+      "title": "Capitales",
       "quiz": "8",
       "color": orangeColor,
       "link": '/home'
-    }
+    },
   ];
   @override
   Widget build(BuildContext context) {
@@ -68,7 +47,7 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
           ),
         ),
         title: const Text(
-          "Choisi la catégorie musicale",
+          "Thème GEOGRAPHIE",
           style: extrabold22White,
         ),
       ),
@@ -81,11 +60,11 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
       physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.symmetric(
           horizontal: fixPadding * 2.0, vertical: fixPadding),
-      itemCount: musicCategoriesList.length,
+      itemCount: geographicCategoriesList.length,
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, musicCategoriesList[index]['link'].toString(),
+            Navigator.pushNamed(context, geographicCategoriesList[index]['link'].toString(),
                 arguments: {"name": "quiz"});
           },
           child: Container(
@@ -111,8 +90,8 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
                   ),
                   alignment: Alignment.center,
                   child: Image.asset(
-                    musicCategoriesList[index]['image'].toString(),
-                    color: musicCategoriesList[index]['color'] as Color,
+                    geographicCategoriesList[index]['image'].toString(),
+                    color: geographicCategoriesList[index]['color'] as Color,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -123,12 +102,12 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        musicCategoriesList[index]['title'].toString(),
+                        geographicCategoriesList[index]['title'].toString(),
                         style: bold18Black,
                       ),
                       height5Space,
                       Text(
-                        "${musicCategoriesList[index]['quiz']} Quiz",
+                        "${geographicCategoriesList[index]['quiz']} niveaux",
                         style: semibold16Grey,
                       )
                     ],

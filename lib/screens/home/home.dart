@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'package:rc_fl_quiz_app/widget/column_builder.dart';
+import 'package:rc_fl_quiz_app/screens/geographicCategories/GeographicCategories.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       "image": "assets/home/world.png",
       "title": "Géographie",
       "color": lightGreenColor,
-      "link": '/login'
+      "link": '/geographicCategories',
     }
   ];
 

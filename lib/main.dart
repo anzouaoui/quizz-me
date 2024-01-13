@@ -4,6 +4,8 @@ import 'package:rc_fl_quiz_app/screens/musicCategories/MusicCategories.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'screens/screens.dart';
 import 'screens/MusicQuizz/Levels/Levels_screen.dart';
+import 'screens/GeographicQuizz/Levels/LevelsCountries_screen.dart';
+import 'screens/geographicCategories/GeographicCategories.dart';
 
 void main() {
   runApp(const MyApp());
@@ -98,6 +100,12 @@ class MyApp extends StatelessWidget {
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
+            case '/geographicCategories':
+            return PageTransition(
+              child: const GeographicCategoriesScreen(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
           case '/liveQuiz':
             return PageTransition(
               child: const LiveQuizScreen(),
@@ -107,6 +115,12 @@ class MyApp extends StatelessWidget {
             case '/MusicQuiz':
             return PageTransition(
               child: LevelsPage(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
+            case '/GeographicQuiz':
+            return PageTransition(
+              child: LevelsCountriesPage(),
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
