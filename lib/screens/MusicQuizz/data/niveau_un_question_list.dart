@@ -49,7 +49,7 @@ List<QuestionModel> questions_un = [
       1,
     'printemps_un_vivaldi.mp3', {
     "MOZART": false,
-    "SHUBERT": false,
+    "SCHUBERT": false,
     "SHUMANN": false,
     "VIVALDI": true,
   },/*
@@ -63,7 +63,7 @@ List<QuestionModel> questions_un = [
     'elise_beethoven.mp3', {
     "MOZART": false,
     "BEETHOVEN": true,
-    "MALHEUR": false,
+    "MAHLER": false,
     "SCHUBERT": false,
   },/*
   'Bagatelle en La Mineur - La Lettre à Elise',
@@ -89,7 +89,7 @@ List<QuestionModel> questions_un = [
     'ave_maria_schubert.mp3', {
     "SCHUMANN": false,
     "BEETHOVEN": false,
-    "SHUBERT": true,
+    "SCHUBERT": true,
     "MALHER": false,
   },/*
   'Ave Maria',
@@ -152,7 +152,7 @@ List<QuestionModel> questions_un = [
       1,
     'danude_bleu_strauss.mp3', {
     "BEETHOVEN": false,
-    "MALHER": false,
+    "MAHLER": false,
     "J. STRAUSS II": true,
     "BRAHMS": false,
   }),
@@ -162,9 +162,9 @@ List<QuestionModel> questions_un = [
       1,
     'valse_2_tchostakovich.mp3', {
     "J. STRAUSS I": false,
-    "MALHER": false,
+    "MAHLER": false,
     "BEETHOVEN": false,
-    "TCHOSTAKOVITCH": true,
+    "CHOSTAKOVITCH": true,
   }),
 
   //14- Les Quatre Saisons - l'été de Vivaldi
@@ -181,7 +181,7 @@ List<QuestionModel> questions_un = [
   QuestionModel(
       1,
     'pavane_faure.mp3', {
-    "BERLIIOZ": false,
+    "BERLIOZ": false,
     "LULLY": false,
     "FAURE": true,
     "RAVEL": false,
@@ -204,7 +204,7 @@ List<QuestionModel> questions_un = [
     "BRAHMS": false,
     "MOZART": true,
     "BEETHOVEN": false,
-    "MALHER": false,
+    "MAHLER": false,
   }),
 
   //18- La danse Hongroise de BRAHMS
@@ -213,7 +213,7 @@ List<QuestionModel> questions_un = [
     'danse_hongroise_5_brahms.mp3', {
     "BEETHOVEN": false,
     "MALHER": false,
-    "TCHAIKIOVSKI": false,
+    "TCHAÏKOVSKI": false,
     "BRAHMS": true,
   }),
 

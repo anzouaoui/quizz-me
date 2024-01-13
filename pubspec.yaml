@@ -36,17 +36,18 @@ dependencies:
   pinput: ^2.2.31
   percent_indicator: ^4.2.3
   animated_bottom_navigation_bar: ^1.2.0
-  font_awesome_flutter: ^10.4.0
+#  font_awesome_flutter: ^10.4.0
   im_animations: ^0.1.2
-  cupertino_tabbar: ^2.0.0
+#  cupertino_tabbar: ^2.0.0
   dotted_border: ^2.0.0+3
   flutter_launcher_icons: ^0.12.0
-  firebase_core: ^2.24.2
+  flutter_automation: ^2.0.0
+#  firebase_core: ^2.24.2
   cloud_firestore: ^4.13.6
   cloud_functions: ^4.5.8
   firebase_auth: ^4.15.3
   provider: ^6.1.1
-  firebase_ui_auth: ^1.11.0
+#  firebase_ui_auth: ^1.11.0
   audioplayers: ^5.2.1
   audioplayers_web: ^4.1.0
   desktop_webview_auth: ^0.0.12
@@ -57,9 +58,9 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter_icons:
-  android: "launcher_icon"
+  android: "new_logo"
   ios: true
-  image_path: "assets/icon.png"
+  image_path: "assets/new_icon.png"
 
 # The following section is specific to Flutter packages.
 flutter:
@@ -83,6 +84,7 @@ flutter:
     - assets/referFriend/
     - assets/contactus/
     - assets/music/
+    - assets/geographic/
     - assets/musicCategories/
     - assets/geographicCategories/
 
@@ -103,3 +105,15 @@ flutter:
       fonts:
         - asset: fonts/BebasNeue-Regular.ttf
           weight: 400
+    - family: FontAwesomeRegular
+      fonts:
+        - asset: fonts/fa-regular-400.ttf
+          style: normal
+    - family: FontAwesomeBrands
+      fonts:
+          - asset: fonts/fa-brands-400.ttf
+            style: normal
+    - family: FontAwesomeSolid
+      fonts:
+          - asset: fonts/fa-solid-900.ttf
+            style: normal

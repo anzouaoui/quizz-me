@@ -1,8 +1,9 @@
-import 'package:cupertino_tabbar/cupertino_tabbar.dart';
+//import 'package:cupertino_tabbar/cupertino_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'package:rc_fl_quiz_app/widget/column_builder.dart';
 
+/*
 class LeaderBaordScreen extends StatefulWidget {
   const LeaderBaordScreen({super.key});
 
@@ -353,6 +354,7 @@ class _LeaderBaordScreenState extends State<LeaderBaordScreen> {
     );
   }
 
+
   tabbar() {
     return CupertinoTabBar(
       whiteColor,
@@ -388,4 +390,4 @@ class _LeaderBaordScreenState extends State<LeaderBaordScreen> {
       innerHorizontalPadding: 20.0,
     );
   }
-}
+}*/
