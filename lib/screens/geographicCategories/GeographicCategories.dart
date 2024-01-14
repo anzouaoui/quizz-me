@@ -23,7 +23,7 @@ class _GeographicCategoriesScreenState extends State<GeographicCategoriesScreen>
       "title": "Capitales",
       "quiz": "8",
       "color": orangeColor,
-      "link": '/home'
+      "link": '/CapitalesQuiz'
     },
   ];
   @override
