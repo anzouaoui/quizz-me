@@ -1,21 +1,19 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelThree/NiveauTroisPaysPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelTwo/NiveaDeuxPaysPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelTwo/NiveauDeuxPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelThree/NiveauTroisCapitalesPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelTwo/NiveaDeuxCapitalesPage_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class CountriesQuizResultLevelTwoScreen extends StatefulWidget {
-  const CountriesQuizResultLevelTwoScreen({super.key, required this.scoreLevelTwo});
-  final int scoreLevelTwo
-  ;
+class CapitaleQuizResultLevelTwoScreen extends StatefulWidget {
+  const CapitaleQuizResultLevelTwoScreen({super.key, required this.scoreLevelTwo});
+  final int scoreLevelTwo;
 
   @override
-  State<CountriesQuizResultLevelTwoScreen> createState() => _CountriesQuizResultLevelTwoScreenState();
+  State<CapitaleQuizResultLevelTwoScreen> createState() => _CapitaleQuizResultLevelTwoScreenState();
 }
 
-class _CountriesQuizResultLevelTwoScreenState extends State<CountriesQuizResultLevelTwoScreen> {
+class _CapitaleQuizResultLevelTwoScreenState extends State<CapitaleQuizResultLevelTwoScreen> {
   int totalQuestion = 20;
   @override
   Widget build(BuildContext context) {
@@ -93,7 +91,7 @@ class _CountriesQuizResultLevelTwoScreenState extends State<CountriesQuizResultL
       children: [
         IconButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/MusicQuiz');
+            Navigator.pushNamed(context, '/CapitalesQuiz');
           },
           icon: const Icon(
             Icons.close,
@@ -110,7 +108,7 @@ class _CountriesQuizResultLevelTwoScreenState extends State<CountriesQuizResultL
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const NiveauTroisPaysPage()));
+                builder: (context) => const NiveauTroisCapitalesPage()));
       },
       child: Container(
         padding: const EdgeInsets.all(fixPadding * 2.0),
@@ -202,6 +200,6 @@ class _CountriesQuizResultLevelTwoScreenState extends State<CountriesQuizResultL
   }
 
   onwillpop() {
-    Navigator.pushNamed(context, '/MusicQuiz');
+    Navigator.pushNamed(context, '/CapitalesQuiz');
   }
 }
