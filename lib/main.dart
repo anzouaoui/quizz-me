@@ -6,6 +6,7 @@ import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'screens/screens.dart';
 import 'screens/MusicQuizz/Levels/Levels_screen.dart';
 import 'screens/GeographicQuizz/Levels/LevelsCountries_screen.dart';
+import 'screens/capitalGeographicQuizz/Levels/LevelsCapitales_screen.dart';
 import 'screens/geographicCategories/GeographicCategories.dart';
 
 void main() {
@@ -116,6 +117,12 @@ class MyApp extends StatelessWidget {
             case '/GeographicQuiz':
             return PageTransition(
               child: LevelsCountriesPage(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
+            case '/CapitalesQuiz':
+            return PageTransition(
+              child: LevelsCapitalesPage(),
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );
