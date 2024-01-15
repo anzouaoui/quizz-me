@@ -21,7 +21,7 @@ Choisissez parmi différents niveaux de difficulté pour chaque thème, défiant
  - Capitales du monde (GEOGRAPHIE) : 5 niveaux
 
 ### Screenshot
-![Splash]([https://drive.proton.me/u/0/b_e65XfxadgNkCxFOKkdjE4hBD2MXzY5ZZKPJbjPGwkqwLxJcEhJW_itRupVnAq1pPR2gtycHgKu3CrOjhy5GQ==/file/pVdUK4oPFyMK_FoqtGZBOqHXNiwGESL0wi5j2N6MHowS29nEqRNSuajAcSbGFp2Febw-ak5kCI11TOcsYav9BA==?r=/b_e65XfxadgNkCxFOKkdjE4hBD2MXzY5ZZKPJbjPGwkqwLxJcEhJW_itRupVnAq1pPR2gtycHgKu3CrOjhy5GQ==/folder/0W2zZp8HNH7tdvLco2O2rRCYqhyQK9N6Vj1xmkj0YKuICcAdr1UL_AVmW-yGtao4nIOAA9BdSYKnp6wtYYf3tQ==](https://drive.proton.me/urls/0TG0RNQQHM#SgrEUKkijwMP))
+![Splash](https://github.com/anzouaoui/quizz-me/blob/main/WhatsApp%20Image%202024-01-15%20%C3%A0%2012.53.10_03ddb6df.jpg)
 
 ## Technologies
 ***
