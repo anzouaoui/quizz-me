@@ -3,7 +3,8 @@
 ///****************************************************************
 
 import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelOne/NiveauUnCapitalesPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelTwo/NiveaDeuxPaysPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelTwo/NiveaDeuxCapitalesPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelThree/NiveauTroisCapitalesPage_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
@@ -102,6 +103,34 @@ class LevelsCapitalesPage extends StatelessWidget {
                   },
                   child: const Text(
                     "NIVEAU 2",
+                    style: bebas36White,
+                  ),
+                ),
+              ),
+
+              //BOUTON NIVEAU 3
+              Container(
+                width: 300,
+                padding: const EdgeInsetsDirectional.symmetric(
+                    horizontal: 32.0, vertical: 8),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0)
+                      ),
+                      minimumSize: const Size(30.0, 50.0)
+                  ),
+                  onPressed: () {
+                    int i = 0;
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NiveauTroisCapitalesPage()));
+                  },
+                  child: const Text(
+                    "NIVEAU 3",
                     style: bebas36White,
                   ),
                 ),

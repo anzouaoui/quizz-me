@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'package:rc_fl_quiz_app/widget/column_builder.dart';
-import 'package:rc_fl_quiz_app/screens/geographicCategories/GeographicCategories.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
