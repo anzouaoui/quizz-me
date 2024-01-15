@@ -2,29 +2,23 @@
 ///********************** NIVEAU 4 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_four.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_one.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_three.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_two.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/data/niveau_quatre_pays_list.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Results/capitale_quiz_result_level_four.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/data/niveau_quatre_capitale_list.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class NiveauQuatrePaysPage extends StatefulWidget {
-  const NiveauQuatrePaysPage({Key? key}) : super(key: key);
+class NiveauQuatreCapitalesPage extends StatefulWidget {
+  const NiveauQuatreCapitalesPage({Key? key}) : super(key: key);
   @override
-  _NiveauQuatrePaysPageState createState() => _NiveauQuatrePaysPageState();
+  _NiveauQuatreCapitalesPageState createState() => _NiveauQuatreCapitalesPageState();
 }
 
-class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
+class _NiveauQuatreCapitalesPageState extends State<NiveauQuatreCapitalesPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
   ///Mise en place de la variable de jeu
   bool isPressed = false;
-
-  ///Musique lancée ou pas
-  bool isPlayed = false;
 
   ///Couleur par défaut des choix
   Color btnColor = primaryColor;
@@ -42,7 +36,7 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
     return Scaffold(
       backgroundColor: whiteColor,
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: const EdgeInsets.all(8.0),
         child: PageView.builder(
           physics: const NeverScrollableScrollPhysics(),
           controller: _controller,
@@ -51,7 +45,7 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
               isPressed = false;
             });
           },
-          itemCount: pays_quatre.length,
+          itemCount: capitale_quatre.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -71,7 +65,7 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${pays_quatre.length}",
+                                "QUESTION ${index + 1} sur ${capitale_quatre.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -81,30 +75,31 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
                     ),
                   ),
                 ),
-
-                ///Affichage de la question
                 const SizedBox(
-                  height: 10.0,
+                  height: 20.0,
                 ),
                 ///Affichage du drapeau
-                  Image(
-                      image: AssetImage(
-                          "assets/geographic/${pays_quatre[index].flag}",
-                      ),
-                  ),
-                const SizedBox(
-                  height: 10.0,
+                Text(
+                    "${capitale_quatre[index].capital}",
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold
+                    )
                 ),
-
+                const SizedBox(
+                  height: 20.0,
+                ),
                 ///Affichage des réponses possibles
-                for (int i = 0; i < pays_quatre[index].answer.length; i++)
+                for (int i = 0; i < capitale_quatre[index].answer!.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? pays_quatre[index].answer.entries.toList()[i].value
+                          ? capitale_quatre[index].answer!.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -115,21 +110,17 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (pays_quatre[index]
-                            .answer.entries
+                        if (capitale_quatre[index]
+                            .answer!.entries
                             .toList()[i]
                             .value) {
                           scoreQuatre += 1;
                           isJust = false;
                         }
                       },
-                      child: Text(
-                        pays_quatre[index].answer.keys.toList()[i],
-                        style: const TextStyle(
-                          color: whiteColor,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      child: Image(
+                        image: AssetImage("assets/geographic/${capitale_quatre[index].answer!.keys.toList()[i]}"),
+                        height: 50.0,
                       ),
                     ),
                   ),
@@ -140,11 +131,11 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
                   //Bouton prochaine question et résultat
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "/GeographicQuiz");
+                      Navigator.pushNamed(context, "/CapitalesQuiz");
                     },
                     child: const Text(
-                    "Quitter",
-                    style: bold20Primary,
+                      "Quitter",
+                      style: bold20Primary,
                     ),
                   ),
                   const SizedBox(
@@ -152,12 +143,12 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == pays_quatre.length
+                        ? index + 1 == capitale_quatre.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CountriesQuizResultLevelFourScreen(scoreLevelFour: scoreQuatre)
+                              builder: (context) => CapitaleQuizResultLevelFourScreen(scoreLevelFour: scoreQuatre)
                           ));
                     }
                         : () {
@@ -167,7 +158,6 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
                       setState(() {
                         isPressed = false;
                         isJust = true;
-                        isPlayed = false;
                       });
                     }
                         : null,
@@ -175,8 +165,8 @@ class _NiveauQuatrePaysPageState extends State<NiveauQuatrePaysPage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des pays_quatre du niveau, alors on affiche le résultat
-                      index + 1 == pays_quatre.length
+                      ///Si on arrive à la fin des capitale_quatre du niveau, alors on affiche le résultat
+                      index + 1 == capitale_quatre.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(

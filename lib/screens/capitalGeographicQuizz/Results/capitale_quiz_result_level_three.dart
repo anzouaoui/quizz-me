@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelFour/NiveauQuatrePaysPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelThree/NiveauTroisCapitalesPage_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
@@ -107,7 +108,7 @@ class _CapitaleQuizResultLevelThreeScreenState extends State<CapitaleQuizResultL
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const NiveauTroisCapitalesPage()));
+                builder: (context) => const NiveauQuatreCapitalesPage()));
       },
       child: Container(
         padding: const EdgeInsets.all(fixPadding * 2.0),

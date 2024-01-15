@@ -2,6 +2,8 @@
 ///******************** PAGE LEVELS *******************************
 ///****************************************************************
 
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelFive/NiveauCinqPaysPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelFour/NiveauQuatrePaysPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelOne/NiveauUnCapitalesPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelTwo/NiveaDeuxCapitalesPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelThree/NiveauTroisCapitalesPage_screen.dart';
@@ -131,6 +133,62 @@ class LevelsCapitalesPage extends StatelessWidget {
                   },
                   child: const Text(
                     "NIVEAU 3",
+                    style: bebas36White,
+                  ),
+                ),
+              ),
+
+              //BOUTON NIVEAU 4
+              Container(
+                width: 300,
+                padding: const EdgeInsetsDirectional.symmetric(
+                    horizontal: 32.0, vertical: 8),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0)
+                      ),
+                      minimumSize: const Size(30.0, 50.0)
+                  ),
+                  onPressed: () {
+                    int i = 0;
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NiveauQuatreCapitalesPage()));
+                  },
+                  child: const Text(
+                    "NIVEAU 4",
+                    style: bebas36White,
+                  ),
+                ),
+              ),
+
+              //BOUTON NIVEAU 5
+              Container(
+                width: 300,
+                padding: const EdgeInsetsDirectional.symmetric(
+                    horizontal: 32.0, vertical: 8),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0)
+                      ),
+                      minimumSize: const Size(30.0, 50.0)
+                  ),
+                  onPressed: () {
+                    int i = 0;
+
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NiveauCinqCapitalesPage()));
+                  },
+                  child: const Text(
+                    "NIVEAU 5",
                     style: bebas36White,
                   ),
                 ),

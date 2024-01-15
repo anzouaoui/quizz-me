@@ -1,283 +1,264 @@
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/model/pays_model.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/model/capitale_model.dart';
 
-List<PaysModel> pays_quatre = [
-  //1- Albanie
-  PaysModel(
-    2,
-    'Albanie',
-    'albanie.png',
-    'Tirana',
+List<CapitalModel> capitale_quatre = [
+  //1- Afghanistan
+  CapitalModel(
+    1,
+    'Afghanistan',
+    'Kaboul',
     {
-      "République Tchèque": false,
-      "Albanie": true,
-      "Russie": false,
-      "Ukraine": false,
+      "afghanistan.png": true,
+      "syrie.png": false,
+      "pakistan.png": false,
+      "emirats_arabes_unis.png": false,
     },
   ),
 
-  //2- Taïwan
-  PaysModel(
-    2,
-    'Taïwan',
-    'taiwan.png',
-    'Taipei',
+  //2- Egypte
+  CapitalModel(
+    1,
+    'Egypte',
+    'Le Caire',
     {
-      "Laos": false,
-      "Sri Lanka": false,
-      "Taïwan": true,
-      "Cambodge": false,
+      "tunisie.png": false,
+      "algerie.png": false,
+      "egypte.png": true,
+      "maroc.png": false,
     },
   ),
 
-  //3- Tunisie
-  PaysModel(
-    2,
-    'tunisie',
-    'tunisie.png',
+  //3- Nouvelle-Zélande
+  CapitalModel(
+    1,
+    'Nouvelle-Zélande',
+    'Wellington',
+    {
+      "australie.png": false,
+      "etats_unis.png": false,
+      "canada.png": false,
+      "nouvelle_zelande.png": true,
+    },
+  ),
+
+  //4- Tunisie
+  CapitalModel(
+    1,
+    'Tunisie',
     'Tunis',
     {
-      "Tunisie": true,
-      "Turquie": false,
-      "Soudan": false,
-      "Arabie Saoudite": false,
+      "tunisie.png": true,
+      "maroc.png": false,
+      "turquie.png": false,
+      "egypte.png": false,
     },
   ),
 
-  //4- Pays de Galles
-  PaysModel(
-    2,
-    'Pays de Galles',
-    'pays_de_galles.png',
-    'Cardiff',
+  //5- Madagascar
+  CapitalModel(
+    1,
+    'Madagascar',
+    'Antananarivo',
     {
-      "Angleterre": false,
-      "Ecosse": false,
-      "Irelande": false,
-      "Pays de Galles": true,
+      "afrique_du_sud.png": false,
+      "madagascar.png": true,
+      "mali.png": false,
+      "zambie.png": false,
     },
   ),
 
-  //5- Sénégal
-  PaysModel(
-    2,
-    'Sénégal',
-    'senegal.png',
-    'Dakar',
+  //6- Arabie Saoudite
+  CapitalModel(
+    1,
+    'Arabie Saoudite',
+    'Ryiad',
     {
-      "République démncratique du Congo": false,
-      "Sénégal": true,
-      "Niger": false,
-      "Afrique du Sud": false,
+      "emirats_arabes_unis.png": false,
+      "syrie.png": false,
+      "arabie_saoudite.png": true,
+      "egypte.png": false,
     },
   ),
 
-  //6- Slovénie
-  PaysModel(
-    2,
-    'Slovénie',
-    'slovenie.png',
-    'Ljubljana',
+  //7- Emirats Arabes unis
+  CapitalModel(
+    1,
+    'Emirats Arabes Unis',
+    'Abou Dabi',
     {
-      "Slovaquie": false,
-      "Slovénie": true,
-      "Croatie": false,
-      "Hongrie": false,
+      "emirats_arabes_unis.png": true,
+      "arabie_saoudite.png": false,
+      "algerie.png": false,
+      "liban.png": false,
     },
   ),
 
-  //7- Suède
-  PaysModel(
-    2,
-    'Suède',
-    'suede.png',
-    'Stockholm',
+  //8- Malte
+  CapitalModel(
+    1,
+    'Malte',
+    'La Valette',
     {
-      "Norvège": false,
-      "Danemark": false,
-      "Suède": true,
-      "Finlande": false,
+      "chypre.png": false,
+      "malte.png": true,
+      "italie.png": false,
+      "monaco.png": false,
     },
   ),
 
-  //8- Costa rica
-  PaysModel(
-    2,
-    'Costa Rica',
-    'costa_rica.png',
-    'San José',
+  //9- Cambodge
+  CapitalModel(
+    1,
+    'Cambodge',
+    'Phnom Penh',
     {
-      "Colombie": false,
-      "Porto Rico": true,
-      "Costa Rica": false,
-      "Argentine": false,
+      "laos.png": false,
+      "bengladesh.png": false,
+      "sri_lanka.png": false,
+      "cambodge.png": true,
     },
   ),
 
-  //9- Sri Lanka
-  PaysModel(
-    2,
-    'Sri Lanka',
-    'sri_lanka.png',
-    'Kotte',
+  //10- Cameroun
+  CapitalModel(
+    1,
+    'Cameroun',
+    'Yaounde',
     {
-      "Laos": false,
-      "Cambodge": false,
-      "Tibet": false,
-      "Sri Lanka": true,
+      "cameroun.png": true,
+      "madagascar.png": false,
+      "mali.png": false,
+      "nigeria.png": false,
     },
   ),
 
-  //10- Pérou
-  PaysModel(
-    2,
-    'Pérou',
-    'perou.png',
-    'Lima',
+  //11- République Démocratique du Congo
+  CapitalModel(
+    1,
+    'République Démocratique du Congo',
+    'kinshasa',
     {
-      "Mexique": false,
-      "Colombie": false,
-      "Pérou": true,
-      "Argentine": false,
+      "cameroun.png": false,
+      "congo.png": true,
+      "mali.png": false,
+      "nigeria.png": false,
     },
   ),
 
-  //11- qatar
-  PaysModel(
-    2,
-    "Qatar",
-    'qatar.png',
+  //12- Qatar
+  CapitalModel(
+    1,
+    'Qatar',
     'Doha',
     {
-      "Arabie Asoudite": false,
-      "dubaï": false,
-      "Maroc": false,
-      "Qatar": true,
+      "emirats_arabes_unis.png": false,
+      "arabie_saoudite.png": false,
+      "qatar.png": true,
+      "jordanie.png": false,
     },
   ),
 
-  //12- Biélorussie
-  PaysModel(
-    2,
-    "Biélorussie",
-    'bielorussie.png',
-    'Minsk',
+  //13- Burkina Faso
+  CapitalModel(
+    1,
+    'Burkina Faso',
+    'Ouagadougou',
     {
-      "Bulgarie": false,
-      "Biélorussie": true,
-      "Russie": false,
-      "Ukraine": false,
+      "zambie.png": false,
+      "afrique_du_sud.png": false,
+      "burkina_faso.png": true,
+      "kenya.png": false,
     },
   ),
 
-  //13- Arménie
-  PaysModel(
-    2,
-    "Arménie",
-    'armenie.png',
-    'Erevan',
+  //14- Yemen
+  CapitalModel(
+    1,
+    'Yemen',
+    'Sanaa',
     {
-      "Bulgarie": false,
-      "Arménie": true,
-      "Russie": false,
-      "Slovénie": false,
+      "oman.png": false,
+      "yemen.png": true,
+      "arabie_saoudite.png": false,
+      "soudan.png": false,
     },
   ),
 
-  //14- Irak
-  PaysModel(
-    2,
-    "Irak",
-    'irak.png',
-    'Bagdad',
+  //15- Malaisie
+  CapitalModel(
+    1,
+    'Malaisie',
+    'Kuala Lumpur',
     {
-      "Iran": false,
-      "Turquie": false,
-      "Jordanie": false,
-      "Irak": true,
+      "indonesie.png": false,
+      "philippines.png": false,
+      "sri_lanka.png": false,
+      "malaisie.png": true,
     },
   ),
 
-  //15- République Tchècque
-  PaysModel(
-    2,
-    "République Tchèque",
-    'republique_tcheque.png',
-    'Prague',
+  //16- Liban
+  CapitalModel(
+    1,
+    'Liban',
+    'Beyrouth',
     {
-      "Slovénie": false,
-      "Croatie": false,
-      "République tchèque": true,
-      "Slovaique": false,
+      "syrie.png": false,
+      "soudan.png": false,
+      "liban.png": true,
+      "jordanie.png": false,
     },
   ),
 
-  //16- Mali
-  PaysModel(
-    2,
-    "Mali",
-    'mali.png',
-    'Bamako',
+  //17- Algérie
+  CapitalModel(
+    1,
+    'Algérie',
+    'Alger',
     {
-      "République démocratique du Congo": false,
-      "Niger": false,
-      "Mali": true,
-      "Côte d'Ivoire": false,
+      "algerie.png": true,
+      "tunisie.png": false,
+      "egypte.png": false,
+      "maroc.png": false,
     },
   ),
 
-  //17- Indeonésie
-  PaysModel(
-    2,
-    "Indonésie",
-    'indonesie.png',
-    'Jakarta',
+  //18- Norvège
+  CapitalModel(
+    1,
+    'Norvège',
+    'Oslo',
     {
-      "Indonésie": true,
-      "Sri Lanka": false,
-      "Philippine": false,
-      "Laos": false,
+      "suede.png": false,
+      "finlande.png": false,
+      "norvege.png": true,
+      "danemark.png": false,
     },
   ),
 
-  //18- Porto Rico
-  PaysModel(
-    2,
-    "Porto Rico",
-    'porto_rico.png',
-    'San Juan',
+  //19- Turquie
+  CapitalModel(
+    1,
+    'Turquie',
+    'Ankara',
     {
-      "Costa Rica": false,
-      "Colombie": false,
-      "Porto Rico": true,
-      "Mexique": false,
+      "maroc.png": false,
+      "tunisie.png": false,
+      "pakistan.png": false,
+      "turquie.png": true,
     },
   ),
 
-  //19- Slovaquie
-  PaysModel(
-    2,
-    "Slovaquie",
-    'slovaquie.png',
-    'Bratislava',
+  //20- Albanie
+  CapitalModel(
+    1,
+    'Albanie',
+    'Tirana',
     {
-      "Slovénie": false,
-      "Slovaquie": true,
-      "hongrie": false,
-      "Bulgarie": false,
+      "roumanie.png": false,
+      "albanie.png": true,
+      "montenegro.png": false,
+      "macedoine.png": false,
     },
   ),
 
-  //20- Afrique du Sud
-  PaysModel(
-    2,
-    "Afrique du Sud",
-    'afrique_du_sud.png',
-    'Budapest',
-    {
-      "congo": false,
-      "République démocratique du Congo": false,
-      "Nigeria": false,
-      "Afrique du Sud": true,
-    },
-  ),
 ];
