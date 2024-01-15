@@ -18,7 +18,7 @@ List<QuestionModel> questions_trois = [
       3,
     'marche_turque_mozart.mp3', {
     "BEETHOVEN": false,
-    "MALHER": false,
+    "MAHLER": false,
     "MOZART": true,
     "CHOPIN": false,
   }),
@@ -98,7 +98,7 @@ List<QuestionModel> questions_trois = [
       3,
     'moldau_smetana.mp3', {
     "J.STRAUSS I": false,
-    "MALHER": false,
+    "MAHLER": false,
     "SMETANA": true,
     "GRIEG": false,
   }),

@@ -6,10 +6,10 @@ List<QuestionModel> questions_huit = [
     4,
     'prelude_chopin.mp3',
     {
-      "MALHER": false,
+      "MAHLER": false,
       "CHOPIN": true,
       "GRIEG": false,
-      "LIZST": false,
+      "LISZT": false,
     },
   ),
 
@@ -40,7 +40,7 @@ List<QuestionModel> questions_huit = [
     "CHOPIN": false,
     "BEETHOVEN": false,
     "MOZART": true,
-    "LIZST": false,
+    "LISZT": false,
   }),
 
   //5- Les quatres saisons printemps de Vivaldi
@@ -78,7 +78,7 @@ List<QuestionModel> questions_huit = [
       4,
     'standchen_schubert.mp3', {
     "SCHUMANN": false,
-    "MALHER": false,
+    "MAHLER": false,
     "BRAHMS": false,
     "SCHUBERT": true,
   }),
@@ -129,7 +129,7 @@ List<QuestionModel> questions_huit = [
     'valse_favorite_mozart.mp3', {
     "CHOPIN": false,
     "MOZART": true,
-    "LIZST": false,
+    "LISZT": false,
     "PAGANINI": false,
   }),
 
@@ -150,7 +150,7 @@ List<QuestionModel> questions_huit = [
     "BEETHOVEN": true,
     "MOZART": false,
     "WAGNER": false,
-    "LIZST": false,
+    "LISZT": false,
   }),
 
   //16- Les quatre saisons Automne 3 de Vivaldi

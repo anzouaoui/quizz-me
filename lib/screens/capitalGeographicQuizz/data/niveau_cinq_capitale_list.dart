@@ -44,7 +44,7 @@ List<CapitalModel> capitale_cinq = [
   CapitalModel(
     1,
     'Kenya',
-    'Nairobie',
+    'Nairobi',
     {
       "mali.png": false,
       "kenya.png": true,
@@ -85,9 +85,9 @@ List<CapitalModel> capitale_cinq = [
     'Irak',
     'Bagdad',
     {
-      "irak.png": false,
+      "irak.png": true,
       "arabie_saoudite.png": false,
-      "iran.png": true,
+      "iran.png": false,
       "liban.png": false,
     },
   ),

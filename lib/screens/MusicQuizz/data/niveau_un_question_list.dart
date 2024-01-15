@@ -49,8 +49,8 @@ List<QuestionModel> questions_un = [
       1,
     'printemps_un_vivaldi.mp3', {
     "MOZART": false,
-    "SHUBERT": false,
-    "SHUMANN": false,
+    "SCHUBERT": false,
+    "SCHUMANN": false,
     "VIVALDI": true,
   },/*
     'Concerto n°1 - Les quatres saisons "Le printemps" - 1er Mouvement',
@@ -63,7 +63,7 @@ List<QuestionModel> questions_un = [
     'elise_beethoven.mp3', {
     "MOZART": false,
     "BEETHOVEN": true,
-    "MALHEUR": false,
+    "MAHLER": false,
     "SCHUBERT": false,
   },/*
   'Bagatelle en La Mineur - La Lettre à Elise',
@@ -89,8 +89,8 @@ List<QuestionModel> questions_un = [
     'ave_maria_schubert.mp3', {
     "SCHUMANN": false,
     "BEETHOVEN": false,
-    "SHUBERT": true,
-    "MALHER": false,
+    "SCHUBERT": true,
+    "MAHLER": false,
   },/*
   'Ave Maria',
     'Franz SCHUBERT'*/
@@ -152,7 +152,7 @@ List<QuestionModel> questions_un = [
       1,
     'danude_bleu_strauss.mp3', {
     "BEETHOVEN": false,
-    "MALHER": false,
+    "MAHLER": false,
     "J. STRAUSS II": true,
     "BRAHMS": false,
   }),
@@ -162,9 +162,9 @@ List<QuestionModel> questions_un = [
       1,
     'valse_2_tchostakovich.mp3', {
     "J. STRAUSS I": false,
-    "MALHER": false,
+    "MAHLER": false,
     "BEETHOVEN": false,
-    "TCHOSTAKOVITCH": true,
+    "CHOSTAKOVITCH": true,
   }),
 
   //14- Les Quatre Saisons - l'été de Vivaldi
@@ -204,7 +204,7 @@ List<QuestionModel> questions_un = [
     "BRAHMS": false,
     "MOZART": true,
     "BEETHOVEN": false,
-    "MALHER": false,
+    "MAHLER": false,
   }),
 
   //18- La danse Hongroise de BRAHMS
@@ -212,8 +212,8 @@ List<QuestionModel> questions_un = [
       1,
     'danse_hongroise_5_brahms.mp3', {
     "BEETHOVEN": false,
-    "MALHER": false,
-    "TCHAIKIOVSKI": false,
+    "MAHLER": false,
+    "TCHAIKOVSKI": false,
     "BRAHMS": true,
   }),
 

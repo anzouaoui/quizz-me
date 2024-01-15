@@ -6,7 +6,7 @@ List<QuestionModel> questions_cinq = [
     4,
     'valse_2_op_64_chopin.mp3',
     {
-      "MALHER": false,
+      "MAHLER": false,
       "WAGNER": false,
       "CHOPIN": true,
       "BEETHOVEN": false,
@@ -118,7 +118,7 @@ List<QuestionModel> questions_cinq = [
       4,
     'don_giovanni_mozart.mp3', {
     "BEETHOVEN": false,
-    "MALHER": false,
+    "MAHLER": false,
     "MOZART": true,
     "OFFENBACH": false,
   }),
@@ -177,7 +177,7 @@ List<QuestionModel> questions_cinq = [
   QuestionModel(
       4,
     'marche_millitaire_schubert.mp3', {
-    "MALHER": false,
+    "MAHLER": false,
     "SCHUMANN": false,
     "WAGNER": false,
     "SCHUBERT": true,
@@ -198,8 +198,8 @@ List<QuestionModel> questions_cinq = [
       4,
     'lullaby_brahms.mp3', {
     "DVORAK": false,
-    "MALHER": false,
-    "LIZST": false,
+    "MAHLER": false,
+    "LISZT": false,
     "BRAHMS": true,
   }),
 ];

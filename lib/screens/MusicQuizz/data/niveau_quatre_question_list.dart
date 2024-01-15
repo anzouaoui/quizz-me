@@ -39,7 +39,7 @@ List<QuestionModel> questions_quatre = [
     'sonate_au_claire_de_lune_2_beethoven.mp3', {
     "CHOPIN": false,
     "LISZT": false,
-    "MALHER": false,
+    "MAHLER": false,
     "BEETHOVEN": true,
   }),
 
@@ -90,7 +90,7 @@ List<QuestionModel> questions_quatre = [
     "CHOPIN": false,
     "LISZT": false,
     "DEBUSSY": true,
-    "MALHER": false,
+    "MAHLER": false,
   }),
 
   //10- Concerto pour Trompette de Haydn
@@ -148,7 +148,7 @@ List<QuestionModel> questions_quatre = [
       4,
     'symphonie_7_2_beethoven.mp3', {
     "LISZT": false,
-    "MALHER": false,
+    "MAHLER": false,
     "CHOPIN": false,
     "BEETHOVEN": true,
   }),

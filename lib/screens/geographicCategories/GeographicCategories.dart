@@ -21,7 +21,7 @@ class _GeographicCategoriesScreenState extends State<GeographicCategoriesScreen>
     {
       "image": "assets/geographicCategories/capital.png",
       "title": "Capitales",
-      "quiz": "8",
+      "quiz": "5",
       "color": orangeColor,
       "link": '/CapitalesQuiz'
     },
@@ -47,7 +47,7 @@ class _GeographicCategoriesScreenState extends State<GeographicCategoriesScreen>
           ),
         ),
         title: const Text(
-          "Thème GEOGRAPHIE",
+          "GEOGRAPHIE",
           style: extrabold22White,
         ),
       ),

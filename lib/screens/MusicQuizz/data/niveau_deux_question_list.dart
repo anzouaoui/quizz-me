@@ -59,7 +59,7 @@ List<QuestionModel> questions_deux = [
     'chevauche_des_walkiries_wagner.mp3', {
     "R.STRAUSS": false,
     "WAGNER": true,
-    "MALHER": false,
+    "MAHLER": false,
     "LISZT": false,
   }),
 
@@ -69,7 +69,7 @@ List<QuestionModel> questions_deux = [
     'marche_de_ratezky_strauss.mp3', {
     "WAGNER": false,
     "LISZT": false,
-    "MALHER": false,
+    "MAHLER": false,
     "J.STRAUSS I": true,
   }),
 
@@ -80,7 +80,7 @@ List<QuestionModel> questions_deux = [
     "BEETHOVEN": false,
     "DVORAK": true,
     "CHOSTAKOVITCH": false,
-    "PROKOVIEF": false,
+    "PROKOFIEV": false,
   }),
 
   //9- Les quatres saisons - printemps de Vivaldi
@@ -100,7 +100,7 @@ List<QuestionModel> questions_deux = [
     "CHOPIN": false,
     "BEETHOVEN": true,
     "LISZT": false,
-    "MALHER": false,
+    "MAHLER": false,
   }),
 
   //11- Guillaume Tell de Rossini
@@ -160,7 +160,7 @@ List<QuestionModel> questions_deux = [
     "CHOPIN": true,
     "LISZT": false,
     "BEETHOVEN": false,
-    "MALHER": false,
+    "MAHLER": false,
   }),
 
   //17- Carmina Burana de Orff
@@ -198,7 +198,7 @@ List<QuestionModel> questions_deux = [
       2,
     'lac_des_cygnes_tchaikovski.mp3', {
     "PROKOFIEV": false,
-    "MALHER": false,
+    "MAHLER": false,
     "OFFENBACH": false,
     "TCHAIKOVSKI": true,
   }),
