@@ -19,7 +19,7 @@ List<QuestionModel> questions_sept = [
     'czardas_monti.mp3', {
     "CLEMENTI": false,
     "POULENC": false,
-    "CZARDAS": true,
+    "MONTI": true,
     "BARTOK": false,
   }),
 
@@ -58,7 +58,7 @@ List<QuestionModel> questions_sept = [
       4,
     'reverie_schumann.mp3', {
     "SCHUBERT": false,
-    "MALHER": false,
+    "MAHLER": false,
     "SCHUMANN": true,
     "WAGNER": false,
   }),
@@ -67,7 +67,7 @@ List<QuestionModel> questions_sept = [
   QuestionModel(
       4,
     'concerto_violon_beethoven.mp3', {
-    "LIZST": false,
+    "LISZT": false,
     "BEETHOVEN": true,
     "DVORAK": false,
     "MOZART": false,
@@ -123,14 +123,14 @@ List<QuestionModel> questions_sept = [
     "BOCCHERINI": false,
   }),
 
-  //13- Vocalise de Rakmaninov
+  //13- Vocalise de RACHMANINOV
   QuestionModel(
       4,
-    'vocalise_rakmaninov.mp3', {
+    'vocalise_RACHMANINOV.mp3', {
     "PROKOFIEV": false,
     "STRAVINSKY": false,
     "CHOSTAKOVITCH": false,
-    "RAKMANINOV": true,
+    "RACHMANINOV": true,
   }),
 
   //14- Petite messe solennelle de Rossini

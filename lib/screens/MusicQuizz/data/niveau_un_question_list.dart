@@ -50,7 +50,7 @@ List<QuestionModel> questions_un = [
     'printemps_un_vivaldi.mp3', {
     "MOZART": false,
     "SCHUBERT": false,
-    "SHUMANN": false,
+    "SCHUMANN": false,
     "VIVALDI": true,
   },/*
     'Concerto n°1 - Les quatres saisons "Le printemps" - 1er Mouvement',
@@ -90,7 +90,7 @@ List<QuestionModel> questions_un = [
     "SCHUMANN": false,
     "BEETHOVEN": false,
     "SCHUBERT": true,
-    "MALHER": false,
+    "MAHLER": false,
   },/*
   'Ave Maria',
     'Franz SCHUBERT'*/
@@ -212,8 +212,8 @@ List<QuestionModel> questions_un = [
       1,
     'danse_hongroise_5_brahms.mp3', {
     "BEETHOVEN": false,
-    "MALHER": false,
-    "TCHAÏKOVSKI": false,
+    "MAHLER": false,
+    "TCHAIKOVSKI": false,
     "BRAHMS": true,
   }),
 

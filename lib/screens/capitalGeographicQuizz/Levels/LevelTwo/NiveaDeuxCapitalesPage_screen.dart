@@ -3,6 +3,7 @@
 ///****************************************************************
 
 import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Results/countries_quiz_result_level_one.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Results/capital_quiz_result_level_two.dart';
 import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/data/niveau_deux_capitale_list.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
@@ -26,7 +27,7 @@ class _NiveauDeuxCapitalesPageState extends State<NiveauDeuxCapitalesPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreUn = 0;
+  int scoreDeux = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -114,7 +115,7 @@ class _NiveauDeuxCapitalesPageState extends State<NiveauDeuxCapitalesPage> {
                             .answer!.entries
                             .toList()[i]
                             .value) {
-                          scoreUn += 1;
+                          scoreDeux += 1;
                           isJust = false;
                         }
                       },
@@ -131,7 +132,7 @@ class _NiveauDeuxCapitalesPageState extends State<NiveauDeuxCapitalesPage> {
                   //Bouton prochaine question et résultat
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "/GeographicQuiz");
+                      Navigator.pushNamed(context, "/CapitalesQuiz");
                     },
                     child: const Text(
                       "Quitter",
@@ -148,7 +149,7 @@ class _NiveauDeuxCapitalesPageState extends State<NiveauDeuxCapitalesPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CountriesQuizResultLevelOneScreen(scoreLevelOne: scoreUn)
+                              builder: (context) => CapitaleQuizResultLevelTwoScreen(scoreLevelTwo: scoreDeux)
                           ));
                     }
                         : () {

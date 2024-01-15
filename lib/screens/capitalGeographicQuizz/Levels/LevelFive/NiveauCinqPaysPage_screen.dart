@@ -1,19 +1,19 @@
 ///****************************************************************
-///********************** NIVEAU 3 ********************************
+///********************** NIVEAU 5 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Results/capitale_quiz_result_level_three.dart';
-import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/data/niveau_trois_capitale_list.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Results/capitale_quiz_result_level_four.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/data/niveau_cinq_capitale_list.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class NiveauTroisCapitalesPage extends StatefulWidget {
-  const NiveauTroisCapitalesPage({Key? key}) : super(key: key);
+class NiveauCinqCapitalesPage extends StatefulWidget {
+  const NiveauCinqCapitalesPage({Key? key}) : super(key: key);
   @override
-  _NiveauTroisCapitalesPageState createState() => _NiveauTroisCapitalesPageState();
+  _NiveauCinqCapitalesPageState createState() => _NiveauCinqCapitalesPageState();
 }
 
-class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
+class _NiveauCinqCapitalesPageState extends State<NiveauCinqCapitalesPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
@@ -26,7 +26,7 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreTrois = 0;
+  int scoreCinq = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -45,7 +45,7 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
               isPressed = false;
             });
           },
-          itemCount: capitale_trois.length,
+          itemCount: capitale_cinq.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -65,7 +65,7 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${capitale_trois.length}",
+                                "QUESTION ${index + 1} sur ${capitale_cinq.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -80,7 +80,7 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
                 ),
                 ///Affichage du drapeau
                 Text(
-                    "${capitale_trois[index].capital}",
+                    "${capitale_cinq[index].capital}",
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
@@ -92,14 +92,14 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
                   height: 20.0,
                 ),
                 ///Affichage des réponses possibles
-                for (int i = 0; i < capitale_trois[index].answer!.length; i++)
+                for (int i = 0; i < capitale_cinq[index].answer!.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? capitale_trois[index].answer!.entries.toList()[i].value
+                          ? capitale_cinq[index].answer!.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -110,16 +110,16 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (capitale_trois[index]
+                        if (capitale_cinq[index]
                             .answer!.entries
                             .toList()[i]
                             .value) {
-                          scoreTrois += 1;
+                          scoreCinq += 1;
                           isJust = false;
                         }
                       },
                       child: Image(
-                        image: AssetImage("assets/geographic/${capitale_trois[index].answer!.keys.toList()[i]}"),
+                        image: AssetImage("assets/geographic/${capitale_cinq[index].answer!.keys.toList()[i]}"),
                         height: 50.0,
                       ),
                     ),
@@ -143,12 +143,12 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == capitale_trois.length
+                        ? index + 1 == capitale_cinq.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CapitaleQuizResultLevelThreeScreen(scoreLevelThree: scoreTrois)
+                              builder: (context) => CapitaleQuizResultLevelFourScreen(scoreLevelFour: scoreCinq)
                           ));
                     }
                         : () {
@@ -165,8 +165,8 @@ class _NiveauTroisCapitalesPageState extends State<NiveauTroisCapitalesPage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des capitale_trois du niveau, alors on affiche le résultat
-                      index + 1 == capitale_trois.length
+                      ///Si on arrive à la fin des capitale_cinq du niveau, alors on affiche le résultat
+                      index + 1 == capitale_cinq.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(

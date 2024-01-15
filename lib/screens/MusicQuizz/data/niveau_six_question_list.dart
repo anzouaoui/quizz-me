@@ -67,7 +67,7 @@ List<QuestionModel> questions_six = [
   QuestionModel(
       4,
     'kv_265_mozart.mp3', {
-    "LIZST": false,
+    "LISZT": false,
     "CHOPIN": false,
     "MOZART": true,
     "BEETHOVEN": false,
@@ -199,7 +199,7 @@ List<QuestionModel> questions_six = [
     'gymnopedie_satie.mp3', {
     "BRAHMS": false,
     "SATIE": true,
-    "LIZST": false,
+    "LISZT": false,
     "CHOPIN": false,
   }),
 ];

@@ -1,22 +1,19 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelThree/NiveauTroisPaysPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelTwo/NiveaDeuxPaysPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/GeographicQuizz/Levels/LevelsCountries_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelTwo/NiveauDeuxPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelFive/NiveauCinqPaysPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/capitalGeographicQuizz/Levels/LevelFour/NiveauQuatrePaysPage_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class CountriesQuizResultLevelFourScreen extends StatefulWidget {
-  const CountriesQuizResultLevelFourScreen({super.key, required this.scoreLevelFour});
-  final int scoreLevelFour
-  ;
+class CapitaleQuizResultLevelFourScreen extends StatefulWidget {
+  const CapitaleQuizResultLevelFourScreen({super.key, required this.scoreLevelFour});
+  final int scoreLevelFour;
 
   @override
-  State<CountriesQuizResultLevelFourScreen> createState() => _CountriesQuizResultLevelFourScreenState();
+  State<CapitaleQuizResultLevelFourScreen> createState() => _CapitaleQuizResultLevelFourScreenState();
 }
 
-class _CountriesQuizResultLevelFourScreenState extends State<CountriesQuizResultLevelFourScreen> {
+class _CapitaleQuizResultLevelFourScreenState extends State<CapitaleQuizResultLevelFourScreen> {
   int totalQuestion = 20;
   @override
   Widget build(BuildContext context) {
@@ -94,7 +91,7 @@ class _CountriesQuizResultLevelFourScreenState extends State<CountriesQuizResult
       children: [
         IconButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/MusicQuiz');
+            Navigator.pushNamed(context, '/CapitalesQuiz');
           },
           icon: const Icon(
             Icons.close,
@@ -111,7 +108,7 @@ class _CountriesQuizResultLevelFourScreenState extends State<CountriesQuizResult
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => LevelsCountriesPage()));
+                builder: (context) => const NiveauCinqCapitalesPage()));
       },
       child: Container(
         padding: const EdgeInsets.all(fixPadding * 2.0),
@@ -203,6 +200,6 @@ class _CountriesQuizResultLevelFourScreenState extends State<CountriesQuizResult
   }
 
   onwillpop() {
-    Navigator.pushNamed(context, '/MusicQuiz');
+    Navigator.pushNamed(context, '/CapitalesQuiz');
   }
 }
