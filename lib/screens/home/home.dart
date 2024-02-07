@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'package:rc_fl_quiz_app/widget/column_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -12,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   double completePerent = 0.8;
-
+  final Uri _url = Uri.parse('https://quizz-me-confidentialite.pxxl.space/');
   final livequizList = [
     {
       "image": "assets/home/music.png",
@@ -46,7 +48,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 heightSpace,
               ],
             ),
-          )
+          ),
+          footer(size)
         ],
       ),
     );
@@ -73,6 +76,23 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  footer(Size size) {
+    return  Row(
+      children: [
+        Expanded(
+          child: InkWell(
+            onTap: _launchUrl,
+            child: const Text(
+              "Politiques de confidentialité",
+              style: hyperlink,
+              textAlign: TextAlign.center,
+            )
+          ),
+        ),
+      ],
+    );
+  }
+  
   liveQuizListContent() {
     return ColumnBuilder(
       itemBuilder: (context, index) {
@@ -171,5 +191,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ],
     );
+  }
+
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
   }
 }

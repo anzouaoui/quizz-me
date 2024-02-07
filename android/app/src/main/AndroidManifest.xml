@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.quizz_me.rc_fl_quiz_app">
    <application
-        android:label="Quizz Me"
+        android:label="Quizz-Me"
         android:name="${applicationName}"
-        android:icon="@mipmap/new_logo">
+        android:icon="@mipmap/logo">
         <activity
             android:name=".MainActivity"
             android:exported="true"
