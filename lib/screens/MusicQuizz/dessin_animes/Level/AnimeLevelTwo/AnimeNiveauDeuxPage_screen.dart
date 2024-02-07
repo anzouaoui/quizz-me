@@ -1,20 +1,20 @@
 ///****************************************************************
-///********************** NIVEAU 1 ********************************
+///********************** NIVEAU 2 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_one.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/data/anime_niveau_un_quiestion_list.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/Results/quiz_anime_level_two.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/data/anime_niveau_deux_question_list.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class AnimeNiveauUnPage extends StatefulWidget {
-  const AnimeNiveauUnPage({Key? key}) : super(key: key);
+class AnimeNiveauDeuxPage extends StatefulWidget {
+  const AnimeNiveauDeuxPage({Key? key}) : super(key: key);
   @override
-  _AnimeNiveauUnPageState createState() => _AnimeNiveauUnPageState();
+  _AnimeNiveauDeuxPageState createState() => _AnimeNiveauDeuxPageState();
 }
 
-class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
+class _AnimeNiveauDeuxPageState extends State<AnimeNiveauDeuxPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
@@ -33,7 +33,7 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreUn = 0;
+  int scoreDeux = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -52,7 +52,7 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
               isPressed = false;
             });
           },
-          itemCount: questions_un.length,
+          itemCount: questions_deux.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -72,7 +72,7 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${questions_un.length}",
+                                "QUESTION ${index + 1} sur ${questions_deux.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -94,7 +94,7 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
                     setState(() {
                       isPlayed = true;
                     });
-                    String url = "music/${questions_un[index].music!}";
+                    String url = "music/${questions_deux[index].music!}";
                     player.play(AssetSource(url));
                   },
                   iconSize: 120.0,
@@ -105,14 +105,14 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
                 ),
 
                 ///Affichage des réponses possibles
-                for (int i = 0; i < questions_un[index].answer.length; i++)
+                for (int i = 0; i < questions_deux[index].answer.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? questions_un[index].answer.entries.toList()[i].value
+                          ? questions_deux[index].answer.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -123,16 +123,16 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (questions_un[index]
+                        if (questions_deux[index]
                             .answer.entries
                             .toList()[i]
                             .value) {
-                          scoreUn += 1;
+                          scoreDeux += 1;
                           isJust = false;
                         }
                       },
                       child: Text(
-                        questions_un[index].answer.keys.toList()[i],
+                        questions_deux[index].answer.keys.toList()[i],
                         style: const TextStyle(
                           color: whiteColor,
                           fontSize: 20.0,
@@ -160,12 +160,12 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == questions_un.length
+                        ? index + 1 == questions_deux.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => QuizResultLevelOneScreen(scoreLevelOne: scoreUn)
+                              builder: (context) => QuizAnimeResultLevelTwoScreen(scoreLevelTwo: scoreDeux)
                           ));
                       player.stop();
                     }
@@ -185,8 +185,8 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des questions_un du niveau, alors on affiche le résultat
-                      index + 1 == questions_un.length
+                      ///Si on arrive à la fin des questions_deux du niveau, alors on affiche le résultat
+                      index + 1 == questions_deux.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(

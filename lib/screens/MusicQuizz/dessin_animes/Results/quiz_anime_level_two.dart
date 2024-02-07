@@ -1,19 +1,19 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/Level/AnimeLevelOne/AnimeNiveauUnPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/Level/AnimeLevelTwo/AnimeNiveauDeuxPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/Level/Anime_levels_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class QuizAnimeResultLevelOneScreen extends StatefulWidget {
-  const QuizAnimeResultLevelOneScreen({super.key, required this.scoreLevelOne});
-  final int scoreLevelOne;
+class QuizAnimeResultLevelTwoScreen extends StatefulWidget {
+  const QuizAnimeResultLevelTwoScreen({super.key, required this.scoreLevelTwo});
+  final int scoreLevelTwo;
 
   @override
-  State<QuizAnimeResultLevelOneScreen> createState() => _QuizAnimeResultLevelOneScreenState();
+  State<QuizAnimeResultLevelTwoScreen> createState() => _QuizAnimeResultLevelTwoScreenState();
 }
 
-class _QuizAnimeResultLevelOneScreenState extends State<QuizAnimeResultLevelOneScreen> {
+class _QuizAnimeResultLevelTwoScreenState extends State<QuizAnimeResultLevelTwoScreen> {
   int totalQuestion = 20;
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class _QuizAnimeResultLevelOneScreenState extends State<QuizAnimeResultLevelOneS
               scoreWidget("$totalQuestion", "Questions", greyColor),
               widthSpace,
               widthSpace,
-              scoreWidget("${widget.scoreLevelOne}", "justes", greenColor),
+              scoreWidget("${widget.scoreLevelTwo}", "justes", greenColor),
             ],
           ),
           heightSpace,
@@ -108,7 +108,7 @@ class _QuizAnimeResultLevelOneScreenState extends State<QuizAnimeResultLevelOneS
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const AnimeNiveauDeuxPage()));
+                builder: (context) =>  AnimeLevelsPage()));
       },
       child: Container(
         padding: const EdgeInsets.all(fixPadding * 2.0),

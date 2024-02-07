@@ -21,7 +21,7 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
     {
       "image": "assets/musicCategories/cartoon.png",
       "title": "Dessin animé",
-      "quiz": "8",
+      "quiz": "2",
       "color": orangeColor,
       "link": '/AnimeMusicQuiz'
     },

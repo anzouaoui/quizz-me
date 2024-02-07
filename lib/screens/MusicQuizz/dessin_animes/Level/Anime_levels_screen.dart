@@ -2,7 +2,7 @@
 ///******************** PAGE LEVELS *******************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/Level/AimeLevelOne/AnimeNiveauUnPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/Level/AnimeLevelOne/AnimeNiveauUnPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelFive/NiveauCinqPage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelFour/NiveauQuatrePage_screen.dart';
 import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelSeven/NiveauSeptPage_screen.dart';
@@ -12,6 +12,7 @@ import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelTwo/NiveauDeuxPage
 import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelEight/NiveauHuitPage_screen.dart';
 
 import 'package:flutter/material.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/dessin_animes/Level/AnimeLevelTwo/AnimeNiveauDeuxPage_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
 class AnimeLevelsPage extends StatelessWidget {
@@ -44,7 +45,7 @@ class AnimeLevelsPage extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              "Quiz musical",
+                              "Quiz musical - Dessins animés",
                               style: extrabold22White,
                             ),
                           ),
@@ -103,166 +104,11 @@ class AnimeLevelsPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const NiveauDeuxPage()));
+                            builder: (context) => const AnimeNiveauDeuxPage()));
 
                   },
                   child: const Text(
                       "NIVEAU 2",
-                      style: bebas36White
-                  ),
-                ),
-              ),
-
-              //BOUTON NIVEAU 3
-              Container(
-                width: 300,
-                padding: const EdgeInsetsDirectional.symmetric(
-                    horizontal: 32.0, vertical: 8),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)
-                      ),
-                      minimumSize: const Size(30.0, 50.0)
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NiveauTroisPage()));
-                  },
-                  child: const Text(
-                      "NIVEAU 3",
-                      style: bebas36White
-                  ),
-                ),
-              ),
-
-              //BOUTON NIVEAU 4
-              Container(
-                width: 300,
-                padding: const EdgeInsetsDirectional.symmetric(
-                    horizontal: 32.0, vertical: 8),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)
-                      ),
-                      minimumSize: const Size(30.0, 50.0)
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NiveauQuatrePage()));
-                  },
-                  child: const Text(
-                      "NIVEAU 4",
-                      style: bebas36White
-                  ),
-                ),
-              ),
-              //BOUTON NIVEAU 5
-              Container(
-                width: 300,
-                padding: const EdgeInsetsDirectional.symmetric(
-                    horizontal: 32.0, vertical: 8),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)
-                      ),
-                      minimumSize: const Size(30.0, 50.0)
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NiveauCinqPage()));
-                  },
-                  child: const Text(
-                      "NIVEAU 5",
-                      style: bebas36White
-                  ),
-                ),
-              ),
-
-
-
-              //BOUTON NIVEAU 6
-              Container(
-                width: 300,
-                padding: const EdgeInsetsDirectional.symmetric(
-                    horizontal: 32.0, vertical: 8),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)
-                      ),
-                      minimumSize: const Size(30.0, 50.0)
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NiveauSixPage()));
-                  },
-                  child: const Text(
-                      "NIVEAU 6",
-                      style: bebas36White
-                  ),
-                ),
-              ),
-              //BOUTON NIVEAU 7
-              Container(
-                width: 300,
-                padding: const EdgeInsetsDirectional.symmetric(
-                    horizontal: 32.0, vertical: 8),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)
-                      ),
-                      minimumSize: const Size(30.0, 50.0)
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NiveauSeptPage()));
-                  },
-                  child: const Text(
-                      "NIVEAU 7",
-                      style: bebas36White
-                  ),
-                ),
-              ),
-              //BOUTON NIVEAU 8
-              Container(
-                width: 300,
-                padding: const EdgeInsetsDirectional.symmetric(
-                    horizontal: 32.0, vertical: 8),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0)
-                      ),
-                      minimumSize: const Size(30.0, 50.0)
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NiveauHuitPage()));
-                  },
-                  child: const Text(
-                      "NIVEAU 8",
                       style: bebas36White
                   ),
                 ),

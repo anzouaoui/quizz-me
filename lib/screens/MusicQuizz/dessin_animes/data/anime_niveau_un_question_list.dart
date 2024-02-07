@@ -8,7 +8,7 @@ List<QuestionAnimeModel> questions_un = [
     {
       "Titeuf": false,
       "Cedirc": true,
-      "es aventure de Tintin": false,
+      "Les aventure de Tintin": false,
       "Yakari": false,
     },
   ),
@@ -30,7 +30,7 @@ List<QuestionAnimeModel> questions_un = [
     1,
     'citees_dor.mp3',
     {
-      "Les mystérieuses citées dOr": true,
+      "Les mystérieuses citées d'or": true,
       "Marsupilami": false,
       "Goldorak": false,
       "Capitain Flam": false,

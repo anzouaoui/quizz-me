@@ -43,7 +43,7 @@ class LevelsPage extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            "Quiz musical",
+                            "Quiz musical - Musiques classiques",
                             style: extrabold22White,
                           ),
                         ),
