@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelFive/NiveauCinqPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelFive/ClassiqueNiveauCinqPage_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
 class QuizResultLevelFourScreen extends StatefulWidget {
@@ -107,7 +107,7 @@ class _QuizResultLevelFourScreenState extends State<QuizResultLevelFourScreen> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const NiveauCinqPage()));
+                builder: (context) => const ClassiqueNiveauCinqPage()));
       },
       child: Container(
         padding: const EdgeInsets.all(fixPadding * 2.0),

@@ -1,20 +1,20 @@
 ///****************************************************************
-///********************** NIVEAU 5 ********************************
+///********************** NIVEAU 1 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_five.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/data/niveau_cinq_question_list.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Results/classic_quiz_result_level_one.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/data/classique_niveau_un_question_list.dart';
 import 'package:flutter/material.dart';
-import 'package:rc_fl_quiz_app/theme/theme.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class NiveauCinqPage extends StatefulWidget {
-  const NiveauCinqPage({Key? key}) : super(key: key);
+class ClassiqueNiveauUnPage extends StatefulWidget {
+  const ClassiqueNiveauUnPage({Key? key}) : super(key: key);
   @override
-  _NiveauCinqPageState createState() => _NiveauCinqPageState();
+  _ClassiqueNiveauUnPageState createState() => _ClassiqueNiveauUnPageState();
 }
 
-class _NiveauCinqPageState extends State<NiveauCinqPage> {
+class _ClassiqueNiveauUnPageState extends State<ClassiqueNiveauUnPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
@@ -33,7 +33,7 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreCinq = 0;
+  int scoreUn = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -52,7 +52,7 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
               isPressed = false;
             });
           },
-          itemCount: questions_cinq.length,
+          itemCount: questions_un.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -72,7 +72,7 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${questions_cinq.length}",
+                                "QUESTION ${index + 1} sur ${questions_un.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -88,31 +88,31 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
                   height: 20.0,
                 ),
                 ///Affichage du bouton play
-                IconButton(
-                  icon: !isPlayed? play:pause,
-                  onPressed: () {
-                    setState(() {
-                      isPlayed = true;
-                    });
-                    String url = "music/${questions_cinq[index].music!}";
-                    player.play(AssetSource(url));
-                  },
-                  iconSize: 120.0,
-                  color: !isPlayed ? playIcon : pauseIcon,
-                ),
+                  IconButton(
+                    icon: !isPlayed? play:pause,
+                    onPressed: () {
+                      setState(() {
+                        isPlayed = true;
+                      });
+                      String url = "music/${questions_un[index].music!}";
+                      player.play(AssetSource(url));
+                    },
+                    iconSize: 120.0,
+                    color: !isPlayed ? playIcon : pauseIcon,
+                  ),
                 const SizedBox(
                   height: 20.0,
                 ),
 
                 ///Affichage des réponses possibles
-                for (int i = 0; i < questions_cinq[index].answer.length; i++)
+                for (int i = 0; i < questions_un[index].answer.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? questions_cinq[index].answer.entries.toList()[i].value
+                          ? questions_un[index].answer.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -123,16 +123,16 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (questions_cinq[index]
+                        if (questions_un[index]
                             .answer.entries
                             .toList()[i]
                             .value) {
-                          scoreCinq += 1;
+                          scoreUn += 1;
                           isJust = false;
                         }
                       },
                       child: Text(
-                        questions_cinq[index].answer.keys.toList()[i],
+                        questions_un[index].answer.keys.toList()[i],
                         style: const TextStyle(
                           color: whiteColor,
                           fontSize: 20.0,
@@ -151,8 +151,8 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
                       Navigator.pushNamed(context, "/MusicQuiz");
                     },
                     child: const Text(
-                      "Quitter",
-                      style: bold20Primary,
+                    "Quitter",
+                    style: bold20Primary,
                     ),
                   ),
                   const SizedBox(
@@ -160,12 +160,12 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == questions_cinq.length
+                        ? index + 1 == questions_un.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => QuizResultLevelFiveScreen(scoreLevelFive: scoreCinq)
+                              builder: (context) => QuizResultLevelOneScreen(scoreLevelOne: scoreUn)
                           ));
                       player.stop();
                     }
@@ -185,8 +185,8 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des questions_cinq du niveau, alors on affiche le résultat
-                      index + 1 == questions_cinq.length
+                      ///Si on arrive à la fin des questions_un du niveau, alors on affiche le résultat
+                      index + 1 == questions_un.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(
@@ -204,3 +204,4 @@ class _NiveauCinqPageState extends State<NiveauCinqPage> {
     );
   }
 }
+

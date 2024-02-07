@@ -1,20 +1,20 @@
 ///****************************************************************
-///********************** NIVEAU 1 ********************************
+///********************** NIVEAU 7 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_one.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/data/niveau_un_question_list.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Results/clasic_quiz_result_level_seven.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/data/classique_niveau_sept_question_list.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class NiveauUnPage extends StatefulWidget {
-  const NiveauUnPage({Key? key}) : super(key: key);
+class ClassiqueNiveauSeptPage extends StatefulWidget {
+  const ClassiqueNiveauSeptPage({Key? key}) : super(key: key);
   @override
-  _NiveauUnPageState createState() => _NiveauUnPageState();
+  _ClassiqueNiveauSeptPageState createState() => _ClassiqueNiveauSeptPageState();
 }
 
-class _NiveauUnPageState extends State<NiveauUnPage> {
+class _ClassiqueNiveauSeptPageState extends State<ClassiqueNiveauSeptPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
@@ -33,7 +33,7 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreUn = 0;
+  int scoreSept = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -52,7 +52,7 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
               isPressed = false;
             });
           },
-          itemCount: questions_un.length,
+          itemCount: questions_sept.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -72,7 +72,7 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${questions_un.length}",
+                                "QUESTION ${index + 1} sur ${questions_sept.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -88,31 +88,31 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
                   height: 20.0,
                 ),
                 ///Affichage du bouton play
-                  IconButton(
-                    icon: !isPlayed? play:pause,
-                    onPressed: () {
-                      setState(() {
-                        isPlayed = true;
-                      });
-                      String url = "music/${questions_un[index].music!}";
-                      player.play(AssetSource(url));
-                    },
-                    iconSize: 120.0,
-                    color: !isPlayed ? playIcon : pauseIcon,
-                  ),
+                IconButton(
+                  icon: !isPlayed? play:pause,
+                  onPressed: () {
+                    setState(() {
+                      isPlayed = true;
+                    });
+                    String url = "music/${questions_sept[index].music!}";
+                    player.play(AssetSource(url));
+                  },
+                  iconSize: 120.0,
+                  color: !isPlayed ? playIcon : pauseIcon,
+                ),
                 const SizedBox(
                   height: 20.0,
                 ),
 
                 ///Affichage des réponses possibles
-                for (int i = 0; i < questions_un[index].answer.length; i++)
+                for (int i = 0; i < questions_sept[index].answer.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? questions_un[index].answer.entries.toList()[i].value
+                          ? questions_sept[index].answer.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -123,16 +123,16 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (questions_un[index]
+                        if (questions_sept[index]
                             .answer.entries
                             .toList()[i]
                             .value) {
-                          scoreUn += 1;
+                          scoreSept += 1;
                           isJust = false;
                         }
                       },
                       child: Text(
-                        questions_un[index].answer.keys.toList()[i],
+                        questions_sept[index].answer.keys.toList()[i],
                         style: const TextStyle(
                           color: whiteColor,
                           fontSize: 20.0,
@@ -151,8 +151,8 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
                       Navigator.pushNamed(context, "/MusicQuiz");
                     },
                     child: const Text(
-                    "Quitter",
-                    style: bold20Primary,
+                      "Quitter",
+                      style: bold20Primary,
                     ),
                   ),
                   const SizedBox(
@@ -160,12 +160,12 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == questions_un.length
+                        ? index + 1 == questions_sept.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => QuizResultLevelOneScreen(scoreLevelOne: scoreUn)
+                              builder: (context) => QuizResultLevelSevenScreen(scoreLevelSept: scoreSept)
                           ));
                       player.stop();
                     }
@@ -185,8 +185,8 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des questions_un du niveau, alors on affiche le résultat
-                      index + 1 == questions_un.length
+                      ///Si on arrive à la fin des questions_sept du niveau, alors on affiche le résultat
+                      index + 1 == questions_sept.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(
@@ -204,4 +204,3 @@ class _NiveauUnPageState extends State<NiveauUnPage> {
     );
   }
 }
-

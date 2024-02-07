@@ -2,19 +2,19 @@
 ///********************** NIVEAU 8 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_eight.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/data/niveau_huit_question_list.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Results/classic_quiz_result_level_eight.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/data/classique_niveau_huit_question_list.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class NiveauHuitPage extends StatefulWidget {
-  const NiveauHuitPage({Key? key}) : super(key: key);
+class ClassiqueNiveauHuitPage extends StatefulWidget {
+  const ClassiqueNiveauHuitPage({Key? key}) : super(key: key);
   @override
-  _NiveauHuitPageState createState() => _NiveauHuitPageState();
+  _ClassiqueNiveauHuitPageState createState() => _ClassiqueNiveauHuitPageState();
 }
 
-class _NiveauHuitPageState extends State<NiveauHuitPage> {
+class _ClassiqueNiveauHuitPageState extends State<ClassiqueNiveauHuitPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 

@@ -1,20 +1,20 @@
 ///****************************************************************
-///********************** NIVEAU 4 ********************************
+///********************** NIVEAU 6 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_four.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/data/niveau_quatre_question_list.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Results/classic_quiz_result_level_six.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/data/classque_niveau_six_question_list.dart';
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
+import 'package:audioplayers/audioplayers.dart';
 
-class NiveauQuatrePage extends StatefulWidget {
-  const NiveauQuatrePage({Key? key}) : super(key: key);
+class ClassiqueNiveauSixPage extends StatefulWidget {
+  const ClassiqueNiveauSixPage({Key? key}) : super(key: key);
   @override
-  _NiveauQuatrePageState createState() => _NiveauQuatrePageState();
+  _ClassiqueNiveauSixPageState createState() => _ClassiqueNiveauSixPageState();
 }
 
-class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
+class _ClassiqueNiveauSixPageState extends State<ClassiqueNiveauSixPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
@@ -33,7 +33,7 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreQuatre = 0;
+  int scoreSix = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -52,7 +52,7 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
               isPressed = false;
             });
           },
-          itemCount: questions_quatre.length,
+          itemCount: questions_six.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -72,7 +72,7 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${questions_quatre.length}",
+                                "QUESTION ${index + 1} sur ${questions_six.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -94,7 +94,7 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
                     setState(() {
                       isPlayed = true;
                     });
-                    String url = "music/${questions_quatre[index].music!}";
+                    String url = "music/${questions_six[index].music!}";
                     player.play(AssetSource(url));
                   },
                   iconSize: 120.0,
@@ -105,14 +105,14 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
                 ),
 
                 ///Affichage des réponses possibles
-                for (int i = 0; i < questions_quatre[index].answer.length; i++)
+                for (int i = 0; i < questions_six[index].answer.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? questions_quatre[index].answer.entries.toList()[i].value
+                          ? questions_six[index].answer.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -123,16 +123,16 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (questions_quatre[index]
+                        if (questions_six[index]
                             .answer.entries
                             .toList()[i]
                             .value) {
-                          scoreQuatre += 1;
+                          scoreSix += 1;
                           isJust = false;
                         }
                       },
                       child: Text(
-                        questions_quatre[index].answer.keys.toList()[i],
+                        questions_six[index].answer.keys.toList()[i],
                         style: const TextStyle(
                           color: whiteColor,
                           fontSize: 20.0,
@@ -160,12 +160,12 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == questions_quatre.length
+                        ? index + 1 == questions_six.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => QuizResultLevelFourScreen(scoreLevelFour: scoreQuatre)
+                              builder: (context) => QuizResultLevelSixScreen(scoreLevelSix: scoreSix)
                           ));
                       player.stop();
                     }
@@ -185,8 +185,8 @@ class _NiveauQuatrePageState extends State<NiveauQuatrePage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des questions_quatre du niveau, alors on affiche le résultat
-                      index + 1 == questions_quatre.length
+                      ///Si on arrive à la fin des questions_six du niveau, alors on affiche le résultat
+                      index + 1 == questions_six.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(

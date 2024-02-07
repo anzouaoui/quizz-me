@@ -2,14 +2,14 @@
 ///******************** PAGE LEVELS *******************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelEight/NiveauHuitPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelFive/NiveauCinqPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelFour/NiveauQuatrePage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelSeven/NiveauSeptPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelSix/NiveauSixPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelThree/NiveauTroisPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelTwo/NiveauDeuxPage_screen.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelOne/NiveauUnPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelEight/ClassiqueNiveauHuitPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelFive/ClassiqueNiveauCinqPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelFour/ClassiqueNiveauQuatrePage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelSeven/ClassiqueNiveauSeptPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelSix/ClassiqueNiveauSixPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelThree/ClassiqueNiveauTroisPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelTwo/ClassiqueNiveauDeuxPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelOne/ClassiqueNiveauUnPage_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
@@ -76,7 +76,7 @@ class LevelsPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const NiveauUnPage()));
+                            builder: (context) => const ClassiqueNiveauUnPage()));
                   },
                   child: const Text(
                     "NIVEAU 1",
@@ -102,7 +102,7 @@ class LevelsPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NiveauDeuxPage()));
+                              builder: (context) => const ClassiqueNiveauDeuxPage()));
 
                   },
                   child: const Text(
@@ -129,7 +129,7 @@ class LevelsPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NiveauTroisPage()));
+                              builder: (context) => const ClassiqueNiveauTroisPage()));
                   },
                   child: const Text(
                     "NIVEAU 3",
@@ -155,7 +155,7 @@ class LevelsPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NiveauQuatrePage()));
+                              builder: (context) => const ClassiqueNiveauQuatrePage()));
                   },
                   child: const Text(
                     "NIVEAU 4",
@@ -180,7 +180,7 @@ class LevelsPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NiveauCinqPage()));
+                              builder: (context) => const ClassiqueNiveauCinqPage()));
                   },
                   child: const Text(
                     "NIVEAU 5",
@@ -208,7 +208,7 @@ class LevelsPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NiveauSixPage()));
+                              builder: (context) => const ClassiqueNiveauSixPage()));
                   },
                   child: const Text(
                     "NIVEAU 6",
@@ -233,7 +233,7 @@ class LevelsPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NiveauSeptPage()));
+                              builder: (context) => const ClassiqueNiveauSeptPage()));
                   },
                   child: const Text(
                     "NIVEAU 7",
@@ -258,7 +258,7 @@ class LevelsPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const NiveauHuitPage()));
+                              builder: (context) => const ClassiqueNiveauHuitPage()));
                   },
                   child: const Text(
                     "NIVEAU 8",

@@ -1,20 +1,20 @@
 ///****************************************************************
-///********************** NIVEAU 7 ********************************
+///********************** NIVEAU 5 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_seven.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/data/niveau_sept_question_list.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Results/classic_quiz_result_level_five.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/data/classique_niveau_cinq_question_list.dart';
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
+import 'package:audioplayers/audioplayers.dart';
 
-class NiveauSeptPage extends StatefulWidget {
-  const NiveauSeptPage({Key? key}) : super(key: key);
+class ClassiqueNiveauCinqPage extends StatefulWidget {
+  const ClassiqueNiveauCinqPage({Key? key}) : super(key: key);
   @override
-  _NiveauSeptPageState createState() => _NiveauSeptPageState();
+  _ClassiqueNiveauCinqPageState createState() => _ClassiqueNiveauCinqPageState();
 }
 
-class _NiveauSeptPageState extends State<NiveauSeptPage> {
+class _ClassiqueNiveauCinqPageState extends State<ClassiqueNiveauCinqPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
@@ -33,7 +33,7 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreSept = 0;
+  int scoreCinq = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -52,7 +52,7 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
               isPressed = false;
             });
           },
-          itemCount: questions_sept.length,
+          itemCount: questions_cinq.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -72,7 +72,7 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${questions_sept.length}",
+                                "QUESTION ${index + 1} sur ${questions_cinq.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -94,7 +94,7 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
                     setState(() {
                       isPlayed = true;
                     });
-                    String url = "music/${questions_sept[index].music!}";
+                    String url = "music/${questions_cinq[index].music!}";
                     player.play(AssetSource(url));
                   },
                   iconSize: 120.0,
@@ -105,14 +105,14 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
                 ),
 
                 ///Affichage des réponses possibles
-                for (int i = 0; i < questions_sept[index].answer.length; i++)
+                for (int i = 0; i < questions_cinq[index].answer.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? questions_sept[index].answer.entries.toList()[i].value
+                          ? questions_cinq[index].answer.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -123,16 +123,16 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (questions_sept[index]
+                        if (questions_cinq[index]
                             .answer.entries
                             .toList()[i]
                             .value) {
-                          scoreSept += 1;
+                          scoreCinq += 1;
                           isJust = false;
                         }
                       },
                       child: Text(
-                        questions_sept[index].answer.keys.toList()[i],
+                        questions_cinq[index].answer.keys.toList()[i],
                         style: const TextStyle(
                           color: whiteColor,
                           fontSize: 20.0,
@@ -160,12 +160,12 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == questions_sept.length
+                        ? index + 1 == questions_cinq.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => QuizResultLevelSevenScreen(scoreLevelSept: scoreSept)
+                              builder: (context) => QuizResultLevelFiveScreen(scoreLevelFive: scoreCinq)
                           ));
                       player.stop();
                     }
@@ -185,8 +185,8 @@ class _NiveauSeptPageState extends State<NiveauSeptPage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des questions_sept du niveau, alors on affiche le résultat
-                      index + 1 == questions_sept.length
+                      ///Si on arrive à la fin des questions_cinq du niveau, alors on affiche le résultat
+                      index + 1 == questions_cinq.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(

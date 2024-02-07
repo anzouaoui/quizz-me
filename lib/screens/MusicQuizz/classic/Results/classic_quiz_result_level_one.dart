@@ -1,18 +1,18 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Levels/LevelEight/NiveauHuitPage_screen.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Levels/LevelTwo/ClassiqueNiveauDeuxPage_screen.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class QuizResultLevelSevenScreen extends StatefulWidget {
-  const QuizResultLevelSevenScreen({super.key, required this.scoreLevelSept});
-  final int scoreLevelSept;
+class QuizResultLevelOneScreen extends StatefulWidget {
+  const QuizResultLevelOneScreen({super.key, required this.scoreLevelOne});
+  final int scoreLevelOne;
 
   @override
-  State<QuizResultLevelSevenScreen> createState() => _QuizResultLevelSevenScreenState();
+  State<QuizResultLevelOneScreen> createState() => _QuizResultLevelOneScreenState();
 }
 
-class _QuizResultLevelSevenScreenState extends State<QuizResultLevelSevenScreen> {
+class _QuizResultLevelOneScreenState extends State<QuizResultLevelOneScreen> {
   int totalQuestion = 20;
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ class _QuizResultLevelSevenScreenState extends State<QuizResultLevelSevenScreen>
               scoreWidget("$totalQuestion", "Questions", greyColor),
               widthSpace,
               widthSpace,
-              scoreWidget("${widget.scoreLevelSept}", "justes", greenColor),
+              scoreWidget("${widget.scoreLevelOne}", "justes", greenColor),
             ],
           ),
           heightSpace,
@@ -107,7 +107,7 @@ class _QuizResultLevelSevenScreenState extends State<QuizResultLevelSevenScreen>
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => const NiveauHuitPage()));
+                builder: (context) => const ClassiqueNiveauDeuxPage()));
       },
       child: Container(
         padding: const EdgeInsets.all(fixPadding * 2.0),

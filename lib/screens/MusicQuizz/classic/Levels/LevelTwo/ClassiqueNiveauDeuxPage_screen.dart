@@ -1,20 +1,20 @@
 ///****************************************************************
-///********************** NIVEAU 3 ********************************
+///********************** NIVEAU 2 ********************************
 ///****************************************************************
 
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/Results/quiz_result_level_three.dart';
-import 'package:rc_fl_quiz_app/screens/MusicQuizz/data/niveau_trois_question_list.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/Results/classic_quiz_result_level_two.dart';
+import 'package:rc_fl_quiz_app/screens/MusicQuizz/classic/data/classique_niveau_deux_question_list.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:rc_fl_quiz_app/theme/theme.dart';
 
-class NiveauTroisPage extends StatefulWidget {
-  const NiveauTroisPage({Key? key}) : super(key: key);
+class ClassiqueNiveauDeuxPage extends StatefulWidget {
+  const ClassiqueNiveauDeuxPage({Key? key}) : super(key: key);
   @override
-  _NiveauTroisPageState createState() => _NiveauTroisPageState();
+  _ClassiqueNiveauDeuxPageState createState() => _ClassiqueNiveauDeuxPageState();
 }
 
-class _NiveauTroisPageState extends State<NiveauTroisPage> {
+class _ClassiqueNiveauDeuxPageState extends State<ClassiqueNiveauDeuxPage> {
   ///PageController
   final PageController _controller = PageController(initialPage: 0);
 
@@ -33,7 +33,7 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
   int selectedQuestion = 0;
 
   ///Score
-  int scoreTrois = 0;
+  int scoreDeux = 0;
 
   ///vérification réponse
   bool isJust = true;
@@ -52,7 +52,7 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
               isPressed = false;
             });
           },
-          itemCount: questions_trois.length,
+          itemCount: questions_deux.length,
           itemBuilder: (context, index) {
             return ListView(
               children: [
@@ -72,7 +72,7 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
                           children: [
                             Expanded(
                               child: Text(
-                                "QUESTION ${index + 1} sur ${questions_trois.length}",
+                                "QUESTION ${index + 1} sur ${questions_deux.length}",
                                 style: extrabold22White,
                               ),
                             ),
@@ -94,7 +94,7 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
                     setState(() {
                       isPlayed = true;
                     });
-                    String url = "music/${questions_trois[index].music!}";
+                    String url = "music/${questions_deux[index].music!}";
                     player.play(AssetSource(url));
                   },
                   iconSize: 120.0,
@@ -105,14 +105,14 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
                 ),
 
                 ///Affichage des réponses possibles
-                for (int i = 0; i < questions_trois[index].answer.length; i++)
+                for (int i = 0; i < questions_deux[index].answer.length; i++)
                   Container(
                     width: 300,
                     margin: const EdgeInsets.only(bottom: 8.0),
                     child: MaterialButton(
                       shape: const StadiumBorder(),
                       color: isPressed
-                          ? questions_trois[index].answer.entries.toList()[i].value
+                          ? questions_deux[index].answer.entries.toList()[i].value
                           ? trueAnswer
                           : falseAnswer
                           : greyColor,
@@ -123,16 +123,16 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
                         setState(() {
                           isPressed = true;
                         });
-                        if (questions_trois[index]
+                        if (questions_deux[index]
                             .answer.entries
                             .toList()[i]
                             .value) {
-                          scoreTrois += 1;
+                          scoreDeux += 1;
                           isJust = false;
                         }
                       },
                       child: Text(
-                        questions_trois[index].answer.keys.toList()[i],
+                        questions_deux[index].answer.keys.toList()[i],
                         style: const TextStyle(
                           color: whiteColor,
                           fontSize: 20.0,
@@ -160,12 +160,12 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
                   ),
                   OutlinedButton(
                     onPressed: isPressed
-                        ? index + 1 == questions_trois.length
+                        ? index + 1 == questions_deux.length
                         ? () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => QuizResultLevelThreeScreen(scoreLevelThree: scoreTrois)
+                              builder: (context) => QuizResultLevelTwoScreen(scoreLevelTwo: scoreDeux)
                           ));
                       player.stop();
                     }
@@ -185,8 +185,8 @@ class _NiveauTroisPageState extends State<NiveauTroisPage> {
                       backgroundColor: primaryColor,
                     ),
                     child: Text(
-                      ///Si on arrive à la fin des questions_trois du niveau, alors on affiche le résultat
-                      index + 1 == questions_trois.length
+                      ///Si on arrive à la fin des questions_deux du niveau, alors on affiche le résultat
+                      index + 1 == questions_deux.length
                           ? "Voir les résultats"
                           : "Suivant",
                       style: const TextStyle(
