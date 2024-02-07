@@ -148,7 +148,7 @@ class _AnimeNiveauDeuxPageState extends State<AnimeNiveauDeuxPage> {
                   //Bouton prochaine question et résultat
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "/MusicQuiz");
+                      Navigator.pushNamed(context, "/AnimeMusicQuiz");
                     },
                     child: const Text(
                       "Quitter",

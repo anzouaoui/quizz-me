@@ -149,7 +149,7 @@ class _AnimeNiveauUnPageState extends State<AnimeNiveauUnPage> {
                   //Bouton prochaine question et résultat
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "/MusicQuiz");
+                      Navigator.pushNamed(context, "/AnimeMusicQuiz");
                     },
                     child: const Text(
                       "Quitter",
