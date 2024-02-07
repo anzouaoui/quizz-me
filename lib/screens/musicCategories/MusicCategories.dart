@@ -19,6 +19,13 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
       "link": '/MusicQuiz'
     },
     {
+      "image": "assets/musicCategories/cartoon.png",
+      "title": "Dessin animé",
+      "quiz": "8",
+      "color": orangeColor,
+      "link": '/AnimeMusicQuiz'
+    },
+    {
       "image": "assets/musicCategories/kpop.png",
       "title": "K-POP",
       "quiz": "8",
@@ -39,13 +46,6 @@ class _MusicCategoriesScreenState extends State<MusicCategoriesScreen> {
       "color": lightGreenColor,
       "link": '/home'
     },
-    {
-      "image": "assets/musicCategories/cartoon.png",
-      "title": "Dessin animé",
-      "quiz": "8",
-      "color": orangeColor,
-      "link": '/home'
-    }
   ];
   @override
   Widget build(BuildContext context) {

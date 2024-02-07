@@ -8,6 +8,7 @@ import 'screens/MusicQuizz/Levels/Levels_screen.dart';
 import 'screens/GeographicQuizz/Levels/LevelsCountries_screen.dart';
 import 'screens/capitalGeographicQuizz/Levels/LevelsCapitales_screen.dart';
 import 'screens/geographicCategories/GeographicCategories.dart';
+import 'screens/MusicQuizz/dessin_animes/Level/Anime_levels_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -111,6 +112,12 @@ class MyApp extends StatelessWidget {
             case '/MusicQuiz':
             return PageTransition(
               child: LevelsPage(),
+              type: PageTransitionType.rightToLeft,
+              settings: settings,
+            );
+            case '/AnimeMusicQuiz':
+            return PageTransition(
+              child: AnimeLevelsPage(),
               type: PageTransitionType.rightToLeft,
               settings: settings,
             );

@@ -209,14 +209,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
-  cupertino_icons:
+  desktop_webview_auth:
     dependency: "direct main"
     description:
-      name: cupertino_icons
-      sha256: d57953e10f9f8327ce64a508a355f0b1ec902193f66288e8cb5070e7c47eeb2d
+      name: desktop_webview_auth
+      sha256: a277d3ee920325560c06970bb817825d9ae369cf9ddf870b3eb704094d02a44c
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.6"
+    version: "0.0.12"
   dotted_border:
     dependency: "direct main"
     description:
@@ -297,54 +297,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.10.0"
-  firebase_dynamic_links:
-    dependency: transitive
-    description:
-      name: firebase_dynamic_links
-      sha256: b0522806658428803aeb5e7be0b22a29acb8f8697a8909c36965feaeb1f655bd
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.4.8"
-  firebase_dynamic_links_platform_interface:
-    dependency: transitive
-    description:
-      name: firebase_dynamic_links_platform_interface
-      sha256: "8b90384d8f85c7211f2b5e2d9d5ae98bd08091f116ef2bd1a74b33574efacc61"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.6+16"
-  firebase_ui_auth:
-    dependency: "direct main"
-    description:
-      name: firebase_ui_auth
-      sha256: a318b3072e785a9183c36278fecff9bf2a8ef7d04bb1f6c3731a07919cfdcc86
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.12.1"
-  firebase_ui_localizations:
-    dependency: transitive
-    description:
-      name: firebase_ui_localizations
-      sha256: "7029d9bce8365840957f4d1e3a7f938e893789da2071504d4f3b7eaa31f12fea"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.10.1"
-  firebase_ui_oauth:
-    dependency: transitive
-    description:
-      name: firebase_ui_oauth
-      sha256: e447834f066600614ad8a158c270267e6d3007779028a706218a8521c52fdf8b
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.4.17"
-  firebase_ui_shared:
-    dependency: transitive
-    description:
-      name: firebase_ui_shared
-      sha256: f1d07c130a39104d32fba1dab274b7bcb13be2bf4e652624a4ccabb58f9781f1
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.4.1"
   fixnum:
     dependency: transitive
     description:
@@ -400,14 +352,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  font_awesome_flutter:
-    dependency: "direct main"
-    description:
-      name: font_awesome_flutter
-      sha256: "275ff26905134bcb59417cf60ad979136f1f8257f2f449914b2c3e05bbb4cd6f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "10.7.0"
   http:
     dependency: transitive
     description:
@@ -440,14 +384,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.4"
-  intl:
-    dependency: transitive
-    description:
-      name: intl
-      sha256: "3bc132a9dbce73a7e4a21a17d06e1878839ffbf975568bc875c60537824b0c4d"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.18.1"
   js:
     dependency: transitive
     description:
@@ -821,30 +757,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.3.3"
-  vector_graphics:
-    dependency: transitive
-    description:
-      name: vector_graphics
-      sha256: "18f6690295af52d081f6808f2f7c69f0eed6d7e23a71539d75f4aeb8f0062172"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.9+2"
-  vector_graphics_codec:
-    dependency: transitive
-    description:
-      name: vector_graphics_codec
-      sha256: "531d20465c10dfac7f5cd90b60bbe4dd9921f1ec4ca54c83ebb176dbacb7bb2d"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.9+2"
-  vector_graphics_compiler:
-    dependency: transitive
-    description:
-      name: vector_graphics_compiler
-      sha256: "03012b0a33775c5530576b70240308080e1d5050f0faf000118c20e6463bc0ad"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.9+2"
   vector_math:
     dependency: transitive
     description:
