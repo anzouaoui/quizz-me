@@ -172,6 +172,8 @@ const TextStyle bold16lightGreen = TextStyle(
 const TextStyle bold14Grey =
     TextStyle(color: greyColor, fontSize: 14, fontWeight: FontWeight.w700);
 
+const TextStyle hyperlink =
+TextStyle(color: blackColor, fontSize: 16, fontWeight: FontWeight.w600, decoration: TextDecoration.underline);
 ///*****************************************
 ///***************ICONS*********************
 ///*****************************************

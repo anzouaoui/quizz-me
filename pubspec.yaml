@@ -30,7 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
   onboarding: ^3.1.0
   page_transition: ^2.0.9
   pinput: ^2.2.31
@@ -51,6 +50,7 @@ dependencies:
   audioplayers_web: ^4.1.0
   desktop_webview_auth: ^0.0.12
   url_launcher: ^6.2.3
+  flutter_linkify: ^6.0.0
 
 dev_dependencies:
   flutter_test:
@@ -104,4 +104,12 @@ flutter:
     - family: BebasNeue
       fonts:
         - asset: fonts/BebasNeue-Regular.ttf
+          weight: 400
+    - family: fa-regular-400
+      fonts:
+        - asset: fonts/fa-regular-400.ttf
+          weight: 400
+    - family: fa-solid-900
+      fonts:
+        - asset: fonts/fa-solid-900.ttf
           weight: 400
