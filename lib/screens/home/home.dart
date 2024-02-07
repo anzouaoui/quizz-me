@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       "title": "Géographie",
       "color": lightGreenColor,
       "link": '/geographicCategories',
+      "link": '/GeographicQuiz'
     }
   ];
 

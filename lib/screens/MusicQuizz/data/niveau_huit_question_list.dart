@@ -177,8 +177,8 @@ List<QuestionModel> questions_huit = [
   QuestionModel(
       4,
     'symphonie_fantastique_berlioz.mp3', {
-    "FAURE": true,
-    "BERLIOZ": false,
+    "FAURE": false,
+    "BERLIOZ": true,
     "POULENC": false,
     "DEBUSSY": false,
   }),
